@@ -1,0 +1,238 @@
+
+
+
+
+    nav {
+        background-color: #0E278B;
+        border-bottom: solid 1px white;
+        height: 120px;
+    }
+
+    nav > .container {
+        margin-top: 30px;
+    }
+
+    span#phone {
+        font-family: PermianSansTypeface;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 19px;
+        /* identical to box height */
+
+        color: #FFFFFF;
+    }
+
+    .nav-link {
+        /* Элементы  меню */
+        font-family: PermianSansTypeface;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 100%;
+        line-height: 25px;
+
+        color: #FFFFFF;
+
+        /*margin: 0px 20px;*/
+    }
+
+
+    article#header {
+        height: 740px;
+        background-image: url(../img/arrows.svg),
+        url(../img/arrows-back.svg),
+        url(../img/cross.svg),
+        url(../img/cross.svg),
+            /*url(../img/hand.png),*/ url(../img/hand-with-QR.png),
+        url(../img/cross.svg),
+        url(../img/cross.svg),
+        url(../img/top-circle.svg),
+        url(../img/bottom-circl.svg),
+        url(../img/ellipse_1.svg);
+        background-position: top 10% right 7%, /* arrow */ bottom 15% left 5%, /* back-arrow */ top 20% right 24%, /* cross*/ top 55% right 25%, /* cross*/ bottom -5% right 28%, /* hand*/ top 50% right 46%, /* cross*/ top 66% right 47%, /* cross*/ top left, /* top circle*/ bottom 14% left 30%, /* bottom circle*/ top -100px center; /* ellipse*/
+
+        background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto,
+        cover;
+        background-repeat: no-repeat;
+
+
+
+        /*-webkit-background-size: cover;*/
+
+        /*color: #fff;*/
+    }
+
+    #headertext {
+        position: absolute;
+        /*width: 507px;*/
+        /*height: 254px;*/
+        left: 25%;
+        top: 269px;
+
+
+        font-family: PermianSansTypeface;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 127.5%;
+        /* or 127px */
+
+        letter-spacing: 0.065em;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+
+
+    }
+
+    article#body {
+        height: 100%;
+        background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
+        url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg), /*cross*/ url(../img/right-circle.svg), /*right-circle*/ url(../img/arrows-back.svg), /*arrow-back*/ url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg); /*cross*/
+        /*url(../img/cross.svg);*/
+        background-position: top 10% right, /*Line gradient*/ top 5% left 3%, /*cross*/ top 8% left 7%, /*cross*/ top 8% right, /*right-circle*/ top 23% left 5%, /*arrow-back*/ top 34% right 5%, /*cross*/ top 38% right 8%; /*cross*/
+        background-size: auto;
+        background-repeat: no-repeat;
+
+
+    }
+
+    #contact {
+        background-image: url(../img/arrows-blue.svg); /*arrow-back*/
+        background-position: bottom 22px right; /*arrow-back*/
+        background-size: auto;
+        background-repeat: no-repeat;
+
+    }
+
+    #contact ~ div {
+        background-image: url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg); /*cross*/
+
+        background-position: bottom 100px left -10px, /*cross*/ bottom 240px left, /*cross*/ bottom 100px right 20px, /*cross*/ bottom 240px right; /*cross*/
+
+        background-size: auto;
+        background-repeat: no-repeat;
+
+
+    }
+
+    footer {
+        height: 300px;
+        background-color: #81BFFB;
+
+        background-image: url(../img/footer-circl.svg); /*Circl*/
+        background-position: top right; /*Circl*/
+        background-size: 7%;
+        background-repeat: no-repeat;
+    }
+
+    .my-article-head {
+        margin-top: 150px;
+        font-family: PermianSansTypeface;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 127.5%;
+    }
+
+    .card-header {
+        font-family: PermianSansTypeface;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 127.5%;
+        margin-top: 100px;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .card {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+
+
+    .end-footer {
+        height: 88px;
+        background-color: #0E278B;
+    }
+
+    @media screen and (max-width: 1280px) {
+        #headertext {
+            font-size: 90px;
+        }
+    }
+
+    @media screen and (max-width: 1124px) {
+
+        article#header {
+            height: 740px;
+            background-image: url(../img/arrows.svg),
+            url(../img/cross.svg),
+            url(../img/cross.svg),
+                /*url(../img/hand.png),*/ url(../img/hand-with-QR.png),
+            /*url(../img/cross.svg),*/
+            /*url(../img/cross.svg),*/
+            url(../img/top-circle.svg),
+            url(../img/bottom-circl.svg),
+            url(../img/ellipse_1.svg);
+            background-position: top 10% right 7%, /* arrow */  top 20% right 19%, /* cross*/ top 55% right 20%, /* cross*/ bottom -5% right 20%, /* hand*/ top left, /* top circle*/ bottom 14% left 30%, /* bottom circle*/ top -100px center; /* ellipse*/
+
+            background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto,
+            cover;
+            background-repeat: no-repeat;
+        }
+
+        #headertext {
+            font-size: 80px;
+        }
+
+        .my-article-head {
+            font-size: 50px;
+        }
+
+        .card-header {
+            font-size: 30px;
+        }
+        footer {
+            background-image: url(../img/footer-circl.svg); /*Circl*/
+            background-position: top right; /*cross*/
+            background-size: 5%;
+            background-repeat: no-repeat;
+
+        }
+
+    }
+
+    @media screen and (max-width: 992px) {
+        article#header {
+            height: 740px;
+            background-image:
+                /*url(../img/hand.png),*/ url(../img/hand-with-QR.png),
+            url(../img/top-circle.svg),
+            url(../img/bottom-circl.svg),
+            url(../img/ellipse_1.svg);
+            background-position: bottom -5% right 20%, /* hand*/ top left, /* top circle*/ bottom 14% left 30%, /* bottom circle*/ top -100px center; /* ellipse*/
+
+            background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto,
+            cover;
+            background-repeat: no-repeat;
+        }
+
+        #headertext {
+            font-size: 80px;
+        }
+
+        #contact ~ div {
+
+            background-position: bottom left;
+
+            background-size: auto;
+            background-repeat: no-repeat;
+
+
+        }
+    }
+
+

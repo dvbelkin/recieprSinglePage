@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- МЕТА -->
+    <title>Чековое промо</title>
+    <meta name="description" content="Чековое промо">
+    <meta name="keywords" content="Чековое промо, telegram bot, html, css">
+
+    <!-- Контролирует поведение поисковых систем при индексации страницы -->
+    <meta name="robots" content="index,follow,noodp"><!-- Все поисковые системы -->
+    <meta name="googlebot" content="index,follow"><!-- Указание отдельно для Google -->
+
+    <!-- Позволяет указать Google не показывать в поисковой выдаче поле для поиска по сайту -->
+    <meta name="google" content="nositelinkssearchbox"><!-- Позволяет указать Google не предлагать перевести эту страницу -->
+    <meta name="google" content="notranslate"><!-- Подтверждает авторство страницы в Google Search Console -->
+    <meta name="google-site-verification" content="verification_token"> <!-- Тег указания ПО, которое сгенерировало эту страницу -->
+    <meta name="generator" content="program"><!-- Короткое описание тематики вашего сайта -->
+    <meta name="subject" content="тематика вашего сайта"><!-- open graph Facebook-->
+    <meta content="Заголовок">
+    <meta content="website">
+
+    <!-- если сайт многоязычный -->
+    <!-- <meta property="og:locale" content="ru_RU"> -->
+    <meta content="http://apps.mediasoft.ru">
+
+    <!-- не меньше 600х315, не более 8Мб -->
+    <meta content="http://apps.mediasoft.ru/reciept/assets/images/Логотип MS с белым фоном 260х260.png">
+    <meta content="описание не длиннее 155 символов">
+    <meta content="Facebook ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ник_компании_в_твиттере">
+    <meta name="twitter:title" content="Заголовок">
+    <meta name="twitter:description" content="описание не длиннее 155 символов">
+    <meta name="twitter:creator" content="@ник_в_твиттере">
+
+    <!-- картинка не меньше 280х150, не более 1Мб -->
+    <meta name="twitter:image" content="http://localhost.my/img/tw_cover.jpg">
+
+    <!-- G+ / Pinterest -->
+    <meta content="Заголовок">
+    <meta content="описание не длиннее 155 символов">
+    <meta content="http://localhost.my/img/g_cover.jpg">
+
+    <!-- Google authorship -->
+    <link rel="author" href="https://plus.google.com/[Google+_Profile]/posts" data-mce-href="https://plus.google.com/[Google+_Profile]/posts">
+    <link rel="publisher" href="https://plus.google.com/[Google+_Page_Profile]" data-mce-href="https://plus.google.com/[Google+_Page_Profile]">
+
+    <!-- Фавиконы и иконки сайта -->
+<!--    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" data-mce-href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" data-mce-href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" data-mce-href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" data-mce-href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" data-mce-href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" data-mce-href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" data-mce-href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" data-mce-href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" data-mce-href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" data-mce-href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192" data-mce-href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" data-mce-href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" data-mce-href="/favicon-16x16.png">-->
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4285f4">
+
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4285f4">
+
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+    <link href=./css/bootstrap.css rel="stylesheet">
+    <link href=./css/font/permian.css rel="stylesheet">
+    <script src="./js/bootstrap.bundle.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg border-bottom border-white">
+        <div class="container">
+            <a class="navbar-brand pt-5 pb-4" href="https://www.ms-promotion.ru">
+                <img id="logo" src="./img/logo_MS_invert.svg">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16" color="white">
+                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center nav-fill pt-5 pb-3 fs-5" id="navbarSupportedContent">
+                <a class="nav-link active " aria-current="page" href="#">Главная</a>
+                <a class="nav-link active" aria-current="page" href="#main"><nobr>Примеры механник</nobr></a>
+                <a class="nav-link active" aria-current="page" href="#possibility">Возможности</a>
+                <a class="nav-link active" aria-current="page" href="#team">Команда</a>
+                <a class="nav-link active" aria-current="page" href="#contact">Контакты</a>
+                <a class="nav-link active top-phone" aria-current="page" href="tel:+73833632858">
+                        <img  src="./img/phone.svg">
+                        <span id="phone" type="tel">+7(383) 3632858</span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+<!-- ######################### Header ##########################-->
+
+    <section id="header">
+            <div class="col-5 offset-2 checkpromo">
+                <h1 class="pt-5 user-select-none display-1 text-white fw-bold lh-base ">ЧЕКОВОЕ<br>ПРОМО</h1>
+            </div>
+            <div class="ps-3 col-4 offset-md-7 hand">
+                <img class="" src="./img/hand-with-QR.png">
+            </div>
+    </section>
+
+<!-- ######################### Header ##########################-->
+
+    <section class="background_image">
+        <div class="container">
+            <div class="row pt-5" id="main">
+                <div class="col">
+                    <h1 class="text-center display-3" >ПРИМЕРЫ МЕХАННИКИ</h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-one" >1</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">АНОНС</h3>
+                            <p class="card-text">Покупатель видит анонс акции (в медийной рекламе, SMM, точках продаж).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-two" >2</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">РЕГИСТРАЦИЯ</h3>
+                            <p class="card-text">Впервые покупает  продукт и регистрирует чек в вашей Telegram группе. Telegram бот круглосуточно ведет интерактивный диалог с покупателем. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-three">3</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">ПОКУПКА</h3>
+                            <p class="card-text">Совершает повторную покупку и регистрирует чеки в вашей Telegram группе, чтобы выигрывать ежедневные или еженедельные призы.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <h1 class="card-header ">
+                            <button class="border-0 animation-circle" name="main-four">4</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">ГЛАВНЫЙ ПРИЗ</h3>
+                            <p class="card-text">Участвует в розыгрыше главного приза в конце акции. Участники определяются согласно Вашим, заранее определенным условиям. </p>
+                        </div>
+                        </div>
+                </div>
+
+            </div>
+
+            <div class="row pt-5" id="possibility">
+                <div class="col">
+                    <h1 class="text-center display-3" >ВОЗМОЖНОСТИ</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-three">1</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">Подлинность покупки</h3>
+                            <p class="card-text">Все чеки проходят проверку на подлиность. Вы точно будете знать ваш продукт был в чеке. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-three">2</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">Доступ в торговые сети</h3>
+                            <p class="card-text">С чековым промо необязательно платить за проведения акций в крупных магазинах и торговых сетях</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-three">3</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">Без переналадки</h3>
+                            <p class="card-text">Не обязательно модифицировать элементы пачки или клеить стикеры</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-three">4</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">Использует чат бот Telegram </h3>
+                            <p class="card-text">Мессенджер Telegram доступен и хорошщо известен пользователям. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-three">5</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">Генерация QR кодов </h3>
+                            <p class="card-text">При выполнении необходимых условий акции чат бот генерирует уникальные QR коды считываемые кассами.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <h1 class="card-header">
+                            <button class="border-0 animation-circle" name="main-three">6</button>
+                        </h1>
+                        <div class="card-body">
+                            <h3 class="card-title">Неограниченые сроки акции</h3>
+                            <p class="card-text">Акция может идти длительные сроки, что позволяет вовлечь аудиторию в бренд-игру с определенныеми, понятными правилами. И поддерживать покупательскую активность в течении года.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5" id="team">
+                <div class="col">
+                    <h1 class="text-center display-3" >НАША КОМАНДА</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./img/lanister.jpeg" class="card-img-top rounded" >
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Тирион Ланнистер</h3>
+                            <p class="card-text">
+                                Самый мудрый из Ланнистеров
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./img/white_king.jpg" class="card-img-top rounded" >
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Белкин Денис</h3>
+                            <p class="card-text">
+                                Программинг
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./img/mather_of_dragon.jpg" class="card-img-top rounded " >
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Супрун Наталья</h3>
+                            <p class="card-text">
+                               Специалист по внутримагазинному маркетингу
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5 pb-5" id="contact">
+                <div class="col">
+                    <h1 class="text-center display-3" >ЗАГЛЯНИ К НАМ</h1>
+                </div>
+            </div>
+            <div class="row justify-content-evenly p-4">
+                    <div class="col-sm-6 contact" >
+                        <h2>Контактные данные</h2>
+                        <br>
+                        <h4>Телефон</h4>
+                        <a class="nav-link active" aria-current="page" href="tel:+73833632858">
+                            <nobr>
+                                <img src="./img/phone-footer.svg">
+                                <span style="color: #0E278B; font-family: 'Permian Sans'" id="phone-footer" type="tel">8-383-363-2858</span>
+                            </nobr>
+                        </a>
+                        <br>
+                        <h4>Наша почта</h4>
+                        <a class="nav-link active" aria-current="page" href="mailto:promotion@mediasoft.ru">
+                            <span style="color: #0E278B; font-family: 'Permian Sans'">promotion@mediasoft.ru</span>
+                        </a>
+
+                    </div>
+
+                <div class="col-sm-6 text-center ">
+                    <a href="https://t.me/reciept_bot">
+                        <img class="footer-qr" src="./img/qr-code.gif">
+                    </a>
+                    <h3>Жми QR-код </h3>
+                    <p>Тестовый Telegram канал магазин "Удача"</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--Начало Футер  сайта -->
+
+    <footer class="border-top border-primary p-3">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+                        <ul class="nav col-md-12 justify-content-between fs-5" >
+                            <li class="nav-item"><a href="#" class="nav-link text-muted">Главная</a></li>
+                            <li class="nav-item"><a href="#main" class="nav-link  text-muted">Примеры механник</a></li>
+                            <li class="nav-item"><a href="#possibility" class="nav-link text-muted">Возможности</a></li>
+                            <li class="nav-item"><a href="#team" class="nav-link  text-muted">Команда</a></li>
+                            <li class="nav-item"><a href="#contact" class="nav-link  text-muted">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p style="font-size: 80%">Политика конфиденциальности<br>© 1995-2022 Компания "MediaSoft"</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-size: 80%">Сайт носит исключительно информационный характер и не является публичной офертой, определяемой положениями ГК РФ. Для получения подробной информации о наличии, видах, характеристика и стоимости услуг обращайтесь в офис продаж</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 align-self-center ">
+                    <a href="https://www.ms-promotion.ru">
+                        <img  class="footer-logo" style="margin-left: 10% "  src="./img/logo_ms.svg"/>
+                    </a>
+                </div>
+            </div>
+
+    </footer>
+
+    <!--Конец Футера сайта -->
+    <div class="end-footer" style="background-color: #0E278B; height: 100px"></div>
+
+</body>
+</html>
+<!--<script>
+    $(document).ready(function(){
+
+        $('body').bind('mousewheel',(event)=>{
+            // console.log(event.originalEvent);
+
+            if (window.scrollY < 300) {
+                $("button[name='main-one']").addClass('animation-circle');
+            }   else if (300 <= window.scrollY & window.scrollY< 500) {
+                $("button[name='main-one']").addClass('animation-circle');
+                $("button[name='main-two']").addClass('animation-circle');
+            }   else if (500 <= window.scrollY & window.scrollY< 800) {
+                $("button[name='main-one']").addClass('animation-circle');
+                $("button[name='main-two']").addClass('animation-circle');
+                $("button[name='main-three']").addClass('animation-circle');
+            }   else {
+                $("button[name='main-one']").addClass('animation-circle');
+                $("button[name='main-two']").addClass('animation-circle');
+                $("button[name='main-three']").addClass('animation-circle');
+                $("button[name='main-four']").addClass('animation-circle');
+            }
+        })
+
+    });
+
+</script>-->
+
+<style>
+
+    h1, p, a, .card {
+        font-family: "Permian Sans";
+    }
+
+    nav {
+        background-color: #0E278B;
+        /*border-bottom: solid 1px white;*/
+    }
+
+    .nav-link {
+        color: #FFFFFF;
+        /*margin: 0px 20px;*/
+    }
+
+    .background_image {
+        background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%);
+    }
+
+    .card, .card-header, .card-body {
+        background-color: transparent;
+        border-color: transparent;
+    }
+    footer {
+        background-color: #81BFFB;
+    }
+
+    #header {
+        background-image: url(./img/ellipse_1.svg);
+        background-position: top -90px center; /* ellipse*/
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+
+    .animation-circle {
+        width: 4rem;
+        height: 4rem;
+        background: #0E278B;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: none;
+        color: white;
+    }
+
+    /*################################################## Начинается подстройка под размеры */
+
+
+    @media (min-width: 768px) { /* Ipad mini */
+
+        .hand {
+            margin-top: -100px;
+        }
+
+        .contact {
+            padding: 30px;
+            background-color: #D0E7FD;
+            height: 350px;
+            width: 350px;
+            border-radius: 10px;
+        }
+
+
+        #header {
+            background-image: url(./img/arrows.svg), /* arrow */
+            url(./img/arrows-back.svg), /* back-arrow */
+            url(./img/top-circle.svg), /* top circle*/
+            url(./img/bottom-circl.svg), /* bottom circle*/
+            url(./img/cross.svg), /*Крестик*/
+            url(./img/cross.svg), /*Крестик*/
+            url(./img/cross.svg), /*Крестик*/
+            url(./img/cross.svg), /*Крестик*/
+            url(./img/ellipse_1.svg); /* ellipse*/
+
+            background-position: top 10% right 7%, /* arrow */
+            bottom 10% left 5%, /* back-arrow */
+            top left, /* top circle*/
+            bottom 13% left 30%, /* bottom circle*/
+            bottom 34% right 14%,  /*Крестик*/
+            bottom 66% right 12%,  /*Крестик*/
+            bottom 30% right 55%,  /*Крестик*/
+            bottom 60% right 48%,  /*Крестик*/
+            top -90px center; /* ellipse*/
+
+            background-size: auto auto,
+            auto auto,
+            auto auto,
+            auto auto,
+            auto auto,
+            auto auto,
+            auto auto,
+            auto auto,
+            cover;
+            background-repeat: no-repeat;
+        }
+
+        #possibility {
+            background-image: url(./img/arrows-back.svg); /* back-arrow */
+            background-position: top 70% left; /* arrow */
+            background-size: auto auto;
+            background-repeat: no-repeat;
+        }
+
+        #team {
+            background-image: url(./img/arrows-blue.svg); /* back-arrow */
+            background-position: top 70% right; /* arrow */
+            background-size: auto auto;
+            background-repeat: no-repeat;
+        }
+
+        #contact {
+            background-image: url(./img/arrows-blue.svg); /* back-arrow */
+            background-position: top 50% right; /* arrow */
+            background-size: auto auto;
+            background-repeat: no-repeat;
+        }
+
+        .background_image {
+            background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
+                url(./img/cross-back.svg),
+                url(./img/cross-back.svg),
+                url(./img/cross-back.svg),
+                url(./img/cross-back.svg),
+                url(./img/cross-back.svg),
+                url(./img/cross-back.svg),
+                url(./img/cross-back.svg),
+                url(./img/cross-back.svg),
+                url(./img/circle-right.svg),
+                url(./img/circle-left.svg)
+        ; /* cross */
+            background-position:
+                top left, /*gradient*/
+                top 7% left 5%, /* cross */
+                top 12% left 3%,  /* cross */
+                top 30% right 10%, /* cross */
+                top 40% right 8%, /* cross */
+                top 82% left 5%, /* cross */
+                top 87% left 3%,  /* cross */
+                top 92% right 10%, /* cross */
+                top 87% right 8%, /* cross */
+                top 10% right, /*circle right*/
+                top 65% left /*circle left*/
+        ;  /* cross */
+            background-size:
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* circle right*/
+                auto auto /* circle left*/
+        ;
+            background-repeat: no-repeat;
+
+        }
+
+        footer>.row {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+/*Корректировка верхнего положения руки и надписи Под IpodMini и Ipod Air   768-1024   */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .hand > img {
+            margin-left: -50px;
+        }
+        .checkpromo {
+            margin-left: 40px;
+        }
+
+        .top-phone {
+            font-size: 80%;
+        }
+
+        #possibility {
+            background-image: url(./img/arrows-back.svg); /* back-arrow */
+            background-position: top 70% left; /* arrow */
+            background-size: auto 30px;
+            background-repeat: no-repeat;
+        }
+
+        #team {
+            background-image: url(./img/arrows-blue.svg); /* back-arrow */
+            background-position: top 70% right; /* arrow */
+            background-size: auto 30px;
+            background-repeat: no-repeat;
+        }
+
+        #contact {
+            background-image: url(./img/arrows-blue.svg); /* back-arrow */
+            background-position: top 50% right; /* arrow */
+            background-size: auto 30px;
+            background-repeat: no-repeat;
+        }
+
+        .background_image {
+            background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
+            url(./img/circle-right.svg),
+            url(./img/circle-left.svg)
+        ; /* cross */
+            background-position:
+                    top left, /*gradient*/
+                    top 10% right, /*circle right*/
+                    top 65% left /*circle left*/
+        ;  /* cross */
+            background-size:
+                    auto auto,
+                    auto auto, /* circle right*/
+                    auto auto /* circle left*/
+        ;
+            background-repeat: no-repeat;
+
+        }
+
+        footer>.row {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+    }
+
+
+
+    @media (max-width: 1040px) {
+        .contact {
+            padding: 20px;
+            background-color: #D0E7FD;
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        .footer-logo {
+            height: 60px;
+        }
+    }
+
+    @media (max-width: 990px) {
+        .footer-logo {
+            display: none;
+        }
+
+    }
+
+    @media (max-width: 370px) {
+        .hand > img {
+            width: 200px;
+        }
+        #possibility > div > h1 {
+            font-size: 25px;
+        }
+        .footer-qr {
+            width: 200px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .hand {
+            margin-top: 100px;
+        }
+
+    }
+
+
+
+</style>
+

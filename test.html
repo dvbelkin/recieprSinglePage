@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ewrtqwe r</title>
+    <link href=./css/bootstrap.css rel="stylesheet">
+
+</head>
+<body>
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-4">1</div><div class="col-lg-4">2</div><div class="col-lg-4">3</div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    @media (max-width: 900px) {
+        body {
+            /*background-color: red;*/
+
+        }
+        div[class^='col-'] {
+            background-color: #0a58ca;
+            border: solid 1px yellow;
+        }
+    }
+
+    @media (max-width: 1200px) and (min-width: 900px) {
+        body {
+            background-color: #0dcaf0;
+        }
+        div[class^='col-'] {
+            background-color: #0a58ca;
+            border: solid 1px red;
+        }
+    }
+
+</style>
