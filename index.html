@@ -82,6 +82,7 @@
 
 
     <link href=./css/bootstrap.css rel="stylesheet">
+    <link href=./css/default.css rel="stylesheet">
     <link href=./css/font/permian.css rel="stylesheet">
     <script src="./js/bootstrap.bundle.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -102,7 +103,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center nav-fill pt-5 pb-3 fs-5" id="navbarSupportedContent">
                 <a class="nav-link active " aria-current="page" href="#">Главная</a>
-                <a class="nav-link active" aria-current="page" href="#main"><nobr>Примеры механник</nobr></a>
+                <a class="nav-link active" aria-current="page" href="#main"><nobr>Пример механик</nobr></a>
                 <a class="nav-link active" aria-current="page" href="#possibility">Возможности</a>
                 <a class="nav-link active" aria-current="page" href="#team">Команда</a>
                 <a class="nav-link active" aria-current="page" href="#contact">Контакты</a>
@@ -132,7 +133,7 @@
         <div class="container">
             <div class="row pt-5" id="main">
                 <div class="col">
-                    <h1 class="text-center display-3" >ПРИМЕРЫ МЕХАННИКИ</h1>
+                    <h1 class="text-center display-3" >ПРИМЕР МЕХАНИКИ</h1>
                 </div>
             </div>
 
@@ -345,7 +346,7 @@
                     <div class="row">
                         <ul class="nav col-md-12 justify-content-between fs-5" >
                             <li class="nav-item"><a href="#" class="nav-link text-muted">Главная</a></li>
-                            <li class="nav-item"><a href="#main" class="nav-link  text-muted">Примеры механник</a></li>
+                            <li class="nav-item"><a href="#main" class="nav-link  text-muted">Пример механик</a></li>
                             <li class="nav-item"><a href="#possibility" class="nav-link text-muted">Возможности</a></li>
                             <li class="nav-item"><a href="#team" class="nav-link  text-muted">Команда</a></li>
                             <li class="nav-item"><a href="#contact" class="nav-link  text-muted">Контакты</a></li>
@@ -400,275 +401,4 @@
     });
 
 </script>-->
-
-<style>
-
-    h1, p, a, .card {
-        font-family: "Permian Sans";
-    }
-
-    nav {
-        background-color: #0E278B;
-        /*border-bottom: solid 1px white;*/
-    }
-
-    .nav-link {
-        color: #FFFFFF;
-        /*margin: 0px 20px;*/
-    }
-
-    .background_image {
-        background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%);
-    }
-
-    .card, .card-header, .card-body {
-        background-color: transparent;
-        border-color: transparent;
-    }
-    footer {
-        background-color: #81BFFB;
-    }
-
-    #header {
-        background-image: url(./img/ellipse_1.svg);
-        background-position: top -90px center; /* ellipse*/
-        background-size: auto;
-        background-repeat: no-repeat;
-    }
-
-    .animation-circle {
-        width: 4rem;
-        height: 4rem;
-        background: #0E278B;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        border: none;
-        color: white;
-    }
-
-    /*################################################## Начинается подстройка под размеры */
-
-
-    @media (min-width: 768px) { /* Ipad mini */
-
-        .hand {
-            margin-top: -100px;
-        }
-
-        .contact {
-            padding: 30px;
-            background-color: #D0E7FD;
-            height: 350px;
-            width: 350px;
-            border-radius: 10px;
-        }
-
-
-        #header {
-            background-image: url(./img/arrows.svg), /* arrow */
-            url(./img/arrows-back.svg), /* back-arrow */
-            url(./img/top-circle.svg), /* top circle*/
-            url(./img/bottom-circl.svg), /* bottom circle*/
-            url(./img/cross.svg), /*Крестик*/
-            url(./img/cross.svg), /*Крестик*/
-            url(./img/cross.svg), /*Крестик*/
-            url(./img/cross.svg), /*Крестик*/
-            url(./img/ellipse_1.svg); /* ellipse*/
-
-            background-position: top 10% right 7%, /* arrow */
-            bottom 10% left 5%, /* back-arrow */
-            top left, /* top circle*/
-            bottom 13% left 30%, /* bottom circle*/
-            bottom 34% right 14%,  /*Крестик*/
-            bottom 66% right 12%,  /*Крестик*/
-            bottom 30% right 55%,  /*Крестик*/
-            bottom 60% right 48%,  /*Крестик*/
-            top -90px center; /* ellipse*/
-
-            background-size: auto auto,
-            auto auto,
-            auto auto,
-            auto auto,
-            auto auto,
-            auto auto,
-            auto auto,
-            auto auto,
-            cover;
-            background-repeat: no-repeat;
-        }
-
-        #possibility {
-            background-image: url(./img/arrows-back.svg); /* back-arrow */
-            background-position: top 70% left; /* arrow */
-            background-size: auto auto;
-            background-repeat: no-repeat;
-        }
-
-        #team {
-            background-image: url(./img/arrows-blue.svg); /* back-arrow */
-            background-position: top 70% right; /* arrow */
-            background-size: auto auto;
-            background-repeat: no-repeat;
-        }
-
-        #contact {
-            background-image: url(./img/arrows-blue.svg); /* back-arrow */
-            background-position: top 50% right; /* arrow */
-            background-size: auto auto;
-            background-repeat: no-repeat;
-        }
-
-        .background_image {
-            background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
-                url(./img/cross-back.svg),
-                url(./img/cross-back.svg),
-                url(./img/cross-back.svg),
-                url(./img/cross-back.svg),
-                url(./img/cross-back.svg),
-                url(./img/cross-back.svg),
-                url(./img/cross-back.svg),
-                url(./img/cross-back.svg),
-                url(./img/circle-right.svg),
-                url(./img/circle-left.svg)
-        ; /* cross */
-            background-position:
-                top left, /*gradient*/
-                top 7% left 5%, /* cross */
-                top 12% left 3%,  /* cross */
-                top 30% right 10%, /* cross */
-                top 40% right 8%, /* cross */
-                top 82% left 5%, /* cross */
-                top 87% left 3%,  /* cross */
-                top 92% right 10%, /* cross */
-                top 87% right 8%, /* cross */
-                top 10% right, /*circle right*/
-                top 65% left /*circle left*/
-        ;  /* cross */
-            background-size:
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* circle right*/
-                auto auto /* circle left*/
-        ;
-            background-repeat: no-repeat;
-
-        }
-
-        footer>.row {
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-    }
-
-/*Корректировка верхнего положения руки и надписи Под IpodMini и Ipod Air   768-1024   */
-    @media (min-width: 768px) and (max-width: 1024px) {
-        .hand > img {
-            margin-left: -50px;
-        }
-        .checkpromo {
-            margin-left: 40px;
-        }
-
-        .top-phone {
-            font-size: 80%;
-        }
-
-        #possibility {
-            background-image: url(./img/arrows-back.svg); /* back-arrow */
-            background-position: top 70% left; /* arrow */
-            background-size: auto 30px;
-            background-repeat: no-repeat;
-        }
-
-        #team {
-            background-image: url(./img/arrows-blue.svg); /* back-arrow */
-            background-position: top 70% right; /* arrow */
-            background-size: auto 30px;
-            background-repeat: no-repeat;
-        }
-
-        #contact {
-            background-image: url(./img/arrows-blue.svg); /* back-arrow */
-            background-position: top 50% right; /* arrow */
-            background-size: auto 30px;
-            background-repeat: no-repeat;
-        }
-
-        .background_image {
-            background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
-            url(./img/circle-right.svg),
-            url(./img/circle-left.svg)
-        ; /* cross */
-            background-position:
-                    top left, /*gradient*/
-                    top 10% right, /*circle right*/
-                    top 65% left /*circle left*/
-        ;  /* cross */
-            background-size:
-                    auto auto,
-                    auto auto, /* circle right*/
-                    auto auto /* circle left*/
-        ;
-            background-repeat: no-repeat;
-
-        }
-
-        footer>.row {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-    }
-
-
-
-    @media (max-width: 1040px) {
-        .contact {
-            padding: 20px;
-            background-color: #D0E7FD;
-            height: 300px;
-            width: 300px;
-            border-radius: 10px;
-        }
-        .footer-logo {
-            height: 60px;
-        }
-    }
-
-    @media (max-width: 990px) {
-        .footer-logo {
-            display: none;
-        }
-
-    }
-
-    @media (max-width: 370px) {
-        .hand > img {
-            width: 200px;
-        }
-        #possibility > div > h1 {
-            font-size: 25px;
-        }
-        .footer-qr {
-            width: 200px;
-        }
-    }
-
-    @media (min-width: 1400px) {
-        .hand {
-            margin-top: 100px;
-        }
-
-    }
-
-
-
-</style>
 

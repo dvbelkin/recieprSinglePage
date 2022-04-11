@@ -1,238 +1,297 @@
 
+h1, p, a, .card {
+    font-family: "Permian Sans";
+}
+
+nav {
+    background-color: #0E278B;
+    /*border-bottom: solid 1px white;*/
+}
+
+.nav-link {
+    color: #FFFFFF;
+    /*margin: 0px 20px;*/
+}
+
+.background_image {
+    background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%);
+}
+
+.card, .card-header, .card-body {
+    background-color: transparent;
+    border-color: transparent;
+}
+footer {
+    background-color: #81BFFB;
+}
+
+#header {
+    background-image: url(../img/ellipse_1.svg);
+    background-position: top -90px center; /* ellipse*/
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.animation-circle {
+    width: 4rem;
+    height: 4rem;
+    background: #0E278B;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: none;
+    color: white;
+}
+
+/*################################################## Начинается подстройка под размеры */
 
 
+@media (min-width: 768px) { /* Ipad mini */
 
-    nav {
-        background-color: #0E278B;
-        border-bottom: solid 1px white;
-        height: 120px;
+    .hand {
+        margin-top: -100px;
     }
 
-    nav > .container {
-        margin-top: 30px;
-    }
-
-    span#phone {
-        font-family: PermianSansTypeface;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 19px;
-        /* identical to box height */
-
-        color: #FFFFFF;
-    }
-
-    .nav-link {
-        /* Элементы  меню */
-        font-family: PermianSansTypeface;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 100%;
-        line-height: 25px;
-
-        color: #FFFFFF;
-
-        /*margin: 0px 20px;*/
+    .contact {
+        padding: 30px;
+        background-color: #D0E7FD;
+        height: 350px;
+        width: 350px;
+        border-radius: 10px;
     }
 
 
-    article#header {
-        height: 740px;
-        background-image: url(../img/arrows.svg),
-        url(../img/arrows-back.svg),
-        url(../img/cross.svg),
-        url(../img/cross.svg),
-            /*url(../img/hand.png),*/ url(../img/hand-with-QR.png),
-        url(../img/cross.svg),
-        url(../img/cross.svg),
-        url(../img/top-circle.svg),
-        url(../img/bottom-circl.svg),
-        url(../img/ellipse_1.svg);
-        background-position: top 10% right 7%, /* arrow */ bottom 15% left 5%, /* back-arrow */ top 20% right 24%, /* cross*/ top 55% right 25%, /* cross*/ bottom -5% right 28%, /* hand*/ top 50% right 46%, /* cross*/ top 66% right 47%, /* cross*/ top left, /* top circle*/ bottom 14% left 30%, /* bottom circle*/ top -100px center; /* ellipse*/
+    #header {
+        background-image: url(../img/arrows.svg), /* arrow */
+        url(../img/arrows-back.svg), /* back-arrow */
+        url(../img/top-circle.svg), /* top circle*/
+        url(../img/bottom-circl.svg), /* bottom circle*/
+        url(../img/cross.svg), /*Крестик*/
+        url(../img/cross.svg), /*Крестик*/
+        url(../img/cross.svg), /*Крестик*/
+        url(../img/cross.svg), /*Крестик*/
+        url(../img/ellipse_1.svg); /* ellipse*/
 
-        background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto,
+        background-position: top 10% right 7%, /* arrow */
+        bottom 10% left 5%, /* back-arrow */
+        top left, /* top circle*/
+        bottom 13% left 30%, /* bottom circle*/
+        bottom 34% right 14%,  /*Крестик*/
+        bottom 66% right 12%,  /*Крестик*/
+        bottom 30% right 55%,  /*Крестик*/
+        bottom 60% right 48%,  /*Крестик*/
+        top -90px center; /* ellipse*/
+
+        background-size: auto auto,
+        auto auto,
+        auto auto,
+        auto auto,
+        auto auto,
+        auto auto,
+        auto auto,
+        auto auto,
         cover;
         background-repeat: no-repeat;
-
-
-
-        /*-webkit-background-size: cover;*/
-
-        /*color: #fff;*/
     }
 
-    #headertext {
-        position: absolute;
-        /*width: 507px;*/
-        /*height: 254px;*/
-        left: 25%;
-        top: 269px;
-
-
-        font-family: PermianSansTypeface;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 100px;
-        line-height: 127.5%;
-        /* or 127px */
-
-        letter-spacing: 0.065em;
-        text-transform: uppercase;
-
-        color: #FFFFFF;
-
-
-    }
-
-    article#body {
-        height: 100%;
-        background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
-        url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg), /*cross*/ url(../img/right-circle.svg), /*right-circle*/ url(../img/arrows-back.svg), /*arrow-back*/ url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg); /*cross*/
-        /*url(../img/cross.svg);*/
-        background-position: top 10% right, /*Line gradient*/ top 5% left 3%, /*cross*/ top 8% left 7%, /*cross*/ top 8% right, /*right-circle*/ top 23% left 5%, /*arrow-back*/ top 34% right 5%, /*cross*/ top 38% right 8%; /*cross*/
-        background-size: auto;
+    #possibility {
+        background-image: url(../img/arrows-back.svg); /* back-arrow */
+        background-position: top 70% left; /* arrow */
+        background-size: auto auto;
         background-repeat: no-repeat;
+    }
 
-
+    #team {
+        background-image: url(../img/arrows-blue.svg); /* back-arrow */
+        background-position: top 70% right; /* arrow */
+        background-size: auto auto;
+        background-repeat: no-repeat;
     }
 
     #contact {
-        background-image: url(../img/arrows-blue.svg); /*arrow-back*/
-        background-position: bottom 22px right; /*arrow-back*/
-        background-size: auto;
+        background-image: url(../img/arrows-blue.svg); /* back-arrow */
+        background-position: top 50% right; /* arrow */
+        background-size: auto auto;
+        background-repeat: no-repeat;
+    }
+
+    .background_image {
+        background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
+        url(../img/cross-back.svg),
+        url(../img/cross-back.svg),
+        url(../img/cross-back.svg),
+        url(../img/cross-back.svg),
+        url(../img/cross-back.svg),
+        url(../img/cross-back.svg),
+        url(../img/cross-back.svg),
+        url(../img/cross-back.svg),
+        url(../img/circle-right.svg),
+        url(../img/circle-left.svg)
+    ; /* cross */
+        background-position:
+                top left, /*gradient*/
+                top 7% left 5%, /* cross */
+                top 12% left 3%,  /* cross */
+                top 30% right 10%, /* cross */
+                top 40% right 8%, /* cross */
+                top 82% left 5%, /* cross */
+                top 87% left 3%,  /* cross */
+                top 92% right 10%, /* cross */
+                top 87% right 8%, /* cross */
+                top 10% right, /*circle right*/
+                top 65% left /*circle left*/
+    ;  /* cross */
+        background-size:
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* cross */
+                auto auto, /* circle right*/
+                auto auto /* circle left*/
+    ;
         background-repeat: no-repeat;
 
     }
 
-    #contact ~ div {
-        background-image: url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg), /*cross*/ url(../img/cross-back.svg); /*cross*/
+    footer>.row {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
 
-        background-position: bottom 100px left -10px, /*cross*/ bottom 240px left, /*cross*/ bottom 100px right 20px, /*cross*/ bottom 240px right; /*cross*/
+/*Корректировка верхнего положения руки и надписи Под IpodMini и Ipod Air   768-1024   */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hand > img {
+        margin-left: -50px;
+    }
+    .checkpromo {
+        margin-left: 40px;
+    }
 
-        background-size: auto;
+    .top-phone {
+        font-size: 80%;
+    }
+
+    #possibility {
+        background-image: url(../img/arrows-back.svg); /* back-arrow */
+        background-position: top 70% left; /* arrow */
+        background-size: auto 30px;
         background-repeat: no-repeat;
+    }
 
+    #team {
+        background-image: url(../img/arrows-blue.svg); /* back-arrow */
+        background-position: top 70% right; /* arrow */
+        background-size: auto 30px;
+        background-repeat: no-repeat;
+    }
+
+    #contact {
+        background-image: url(../img/arrows-blue.svg); /* back-arrow */
+        background-position: top 50% right; /* arrow */
+        background-size: auto 30px;
+        background-repeat: no-repeat;
+    }
+
+    .background_image {
+        background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
+        url(../img/circle-right.svg),
+        url(../img/circle-left.svg)
+    ; /* cross */
+        background-position:
+                top left, /*gradient*/
+                top 10% right, /*circle right*/
+                top 65% left /*circle left*/
+    ;  /* cross */
+        background-size:
+                auto auto,
+                auto auto, /* circle right*/
+                auto auto /* circle left*/
+    ;
+        background-repeat: no-repeat;
 
     }
 
-    footer {
+    footer>.row {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+}
+
+
+
+@media (max-width: 1040px) {
+    .contact {
+        padding: 20px;
+        background-color: #D0E7FD;
         height: 300px;
-        background-color: #81BFFB;
+        width: 300px;
+        border-radius: 10px;
+    }
+    .footer-logo {
+        height: 60px;
+    }
+}
 
-        background-image: url(../img/footer-circl.svg); /*Circl*/
-        background-position: top right; /*Circl*/
-        background-size: 7%;
-        background-repeat: no-repeat;
+@media (max-width: 990px) {
+    .footer-logo {
+        display: none;
     }
 
-    .my-article-head {
-        margin-top: 150px;
-        font-family: PermianSansTypeface;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 60px;
-        line-height: 127.5%;
+}
+
+/* Iphone XR* widh 414px */
+
+@media (min-width: 376px) and (max-width: 414px) {
+    #header {
+        height: 720px;
     }
 
-    .card-header {
-        font-family: PermianSansTypeface;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 70px;
-        line-height: 127.5%;
+    .hand > img {
+        width: 300px;
+        margin-left: 90px;
+        margin-top: 208px;
+    }
+    #possibility > div > h1 {
+        font-size: 40px;
+    }
+    .footer-qr {
+        width: 200px;
+    }
+}
+
+
+/* Iphone SE*/
+@media (max-width: 375px) {
+    #header {
+        height: 521px;
+    }
+
+    .hand > img {
+        width: 240px;
+        margin-left: 90px;
+        margin-top: 68px;
+    }
+    #possibility > div > h1 {
+        font-size: 25px;
+    }
+    .footer-qr {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hand {
         margin-top: 100px;
-        border-color: transparent;
-        background-color: transparent;
     }
 
-    .card {
-        background-color: transparent;
-        border-color: transparent;
-    }
+}
 
 
-
-    .end-footer {
-        height: 88px;
-        background-color: #0E278B;
-    }
-
-    @media screen and (max-width: 1280px) {
-        #headertext {
-            font-size: 90px;
-        }
-    }
-
-    @media screen and (max-width: 1124px) {
-
-        article#header {
-            height: 740px;
-            background-image: url(../img/arrows.svg),
-            url(../img/cross.svg),
-            url(../img/cross.svg),
-                /*url(../img/hand.png),*/ url(../img/hand-with-QR.png),
-            /*url(../img/cross.svg),*/
-            /*url(../img/cross.svg),*/
-            url(../img/top-circle.svg),
-            url(../img/bottom-circl.svg),
-            url(../img/ellipse_1.svg);
-            background-position: top 10% right 7%, /* arrow */  top 20% right 19%, /* cross*/ top 55% right 20%, /* cross*/ bottom -5% right 20%, /* hand*/ top left, /* top circle*/ bottom 14% left 30%, /* bottom circle*/ top -100px center; /* ellipse*/
-
-            background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto,
-            cover;
-            background-repeat: no-repeat;
-        }
-
-        #headertext {
-            font-size: 80px;
-        }
-
-        .my-article-head {
-            font-size: 50px;
-        }
-
-        .card-header {
-            font-size: 30px;
-        }
-        footer {
-            background-image: url(../img/footer-circl.svg); /*Circl*/
-            background-position: top right; /*cross*/
-            background-size: 5%;
-            background-repeat: no-repeat;
-
-        }
-
-    }
-
-    @media screen and (max-width: 992px) {
-        article#header {
-            height: 740px;
-            background-image:
-                /*url(../img/hand.png),*/ url(../img/hand-with-QR.png),
-            url(../img/top-circle.svg),
-            url(../img/bottom-circl.svg),
-            url(../img/ellipse_1.svg);
-            background-position: bottom -5% right 20%, /* hand*/ top left, /* top circle*/ bottom 14% left 30%, /* bottom circle*/ top -100px center; /* ellipse*/
-
-            background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto, auto auto,
-            cover;
-            background-repeat: no-repeat;
-        }
-
-        #headertext {
-            font-size: 80px;
-        }
-
-        #contact ~ div {
-
-            background-position: bottom left;
-
-            background-size: auto;
-            background-repeat: no-repeat;
-
-
-        }
-    }
 
 
