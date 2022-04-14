@@ -340,12 +340,10 @@
 <script>
 
     $(document).ready(function(){
-        const w = $(window).width();
-        const start_margin_text = parseInt($('#header>h1').css('margin-left'));
-        const start_margin_image = parseInt($('#header>img').css('margin-left'));
 
         // ссылка на пример API на элементе задается обозревателя отслеживающий виден элемент или нет
         // https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API
+        var start = false;
 
         var options = {
             root: document.querySelector('#scrollArea'),
@@ -354,28 +352,32 @@
         }
         var callback = function(entries, observer) {
             /* Content excerpted, show below */
-            entries.map((item, index,  arr)=>{
-                if (! $(item.target).hasClass('test')) {
-                    console.log('Add')
-                    $(item.target).addClass('test');
-                }   else {
-                    console.log('remove')
-                    $(item.target).removeClass('test');
-                }
-
-            });
-
+            if (start) {
+                entries.map((item, index,  arr)=>{
+                    if ($(item.target).hasClass('anim')) {
+                        $(item.target).removeClass('anim');
+                    }   else {
+                        $(item.target).addClass('anim');
+                    }
+                });
+            } else {
+                start = true;
+            }
         };
 
-        var observer = new IntersectionObserver(callback, options);
-        // var target = document.querySelector('.animation-circle');
         var target = $('.animation-circle');
+        var observer = new IntersectionObserver(callback, options);
 
         target.map((index, currentValue, array)=>{
             observer.observe(currentValue);
         });
 
 
+
+
+        const w = $(window).width();
+        const start_margin_text = parseInt($('#header>h1').css('margin-left'));
+        const start_margin_image = parseInt($('#header>img').css('margin-left'));
 
         var scroll_head_function = (x)=>{
             $(window).scroll(function (event) {
