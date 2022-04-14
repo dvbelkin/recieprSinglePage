@@ -24,13 +24,17 @@ nav {
 footer {
     background-color: #81BFFB;
 }
+.end-footer {
+    background-color: #0E278B;
+    height: 100px;
+}
 
 #header {
-    background-image: url(../img/ellipse_1.svg);
-    background-position: top -90px center; /* ellipse*/
-    background-size: auto;
-    background-repeat: no-repeat;
+    background: url(../img/ellipse_1.svg) top -90px center/auto no-repeat; /* ellipse*/
+    height: 720px;
 }
+
+
 
 .animation-circle {
     width: 4rem;
@@ -43,13 +47,25 @@ footer {
     color: white;
 }
 
+.test {
+    color: red;
+    background-color: #f5ff4c;
+}
+
 /*################################################## Начинается подстройка под размеры */
 
+/* Браузер больче чем 1025*/
+@media (min-width: 1025px)  {
 
-@media (min-width: 768px) { /* Ipad mini */
+    .h1_position {
+        margin-left: 200px;
+        overflow:hidden; /* Кода надпись уходит за пределы ээкрана она исчезает */
+    }
 
-    .hand {
-        margin-top: -100px;
+    .hand_position {
+        margin-top: 10%;
+        margin-left: 60%;
+        overflow:hidden;
     }
 
     .contact {
@@ -62,98 +78,42 @@ footer {
 
 
     #header {
-        background-image: url(../img/arrows.svg), /* arrow */
-        url(../img/arrows-back.svg), /* back-arrow */
-        url(../img/top-circle.svg), /* top circle*/
-        url(../img/bottom-circl.svg), /* bottom circle*/
-        url(../img/cross.svg), /*Крестик*/
-        url(../img/cross.svg), /*Крестик*/
-        url(../img/cross.svg), /*Крестик*/
-        url(../img/cross.svg), /*Крестик*/
-        url(../img/ellipse_1.svg); /* ellipse*/
-
-        background-position: top 10% right 7%, /* arrow */
-        bottom 10% left 5%, /* back-arrow */
-        top left, /* top circle*/
-        bottom 13% left 30%, /* bottom circle*/
-        bottom 34% right 14%,  /*Крестик*/
-        bottom 66% right 12%,  /*Крестик*/
-        bottom 30% right 55%,  /*Крестик*/
-        bottom 60% right 48%,  /*Крестик*/
-        top -90px center; /* ellipse*/
-
-        background-size: auto auto,
-        auto auto,
-        auto auto,
-        auto auto,
-        auto auto,
-        auto auto,
-        auto auto,
-        auto auto,
-        cover;
-        background-repeat: no-repeat;
+        background: url(../img/arrows.svg) top 10% right 7%/auto no-repeat, /* arrow */
+        url(../img/arrows-back.svg) bottom 10% left 5%/auto no-repeat, /* back-arrow */
+        url(../img/top-circle.svg) top left/auto no-repeat, /* top circle*/
+        url(../img/bottom-circl.svg) bottom 10% left 30%/auto no-repeat, /* bottom circle*/
+        url(../img/cross.svg) bottom 34% right 14%/auto no-repeat, /*Крестик*/
+        url(../img/cross.svg) bottom 66% right 12%/auto no-repeat, /*Крестик*/
+        url(../img/cross.svg) bottom 30% right 55%/auto no-repeat, /*Крестик*/
+        url(../img/cross.svg) bottom 60% right 48%/auto no-repeat, /*Крестик*/
+        url(../img/ellipse_1.svg) top -90px center/cover no-repeat;/* ellipse*/
     }
 
     #possibility {
-        background-image: url(../img/arrows-back.svg); /* back-arrow */
-        background-position: top 70% left; /* arrow */
-        background-size: auto auto;
-        background-repeat: no-repeat;
+        background: url(../img/arrows-back.svg) top 70% left/auto no-repeat; /* back-arrow */
     }
 
     #team {
-        background-image: url(../img/arrows-blue.svg); /* back-arrow */
-        background-position: top 70% right; /* arrow */
-        background-size: auto auto;
-        background-repeat: no-repeat;
+        background: url(../img/arrows-blue.svg) top 70% right/auto no-repeat; /* back-arrow */
     }
 
     #contact {
-        background-image: url(../img/arrows-blue.svg); /* back-arrow */
-        background-position: top 50% right; /* arrow */
-        background-size: auto auto;
-        background-repeat: no-repeat;
+        background: url(../img/arrows-blue.svg) top 50% right/auto no-repeat; /* back-arrow */
     }
 
     .background_image {
-        background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
-        url(../img/cross-back.svg),
-        url(../img/cross-back.svg),
-        url(../img/cross-back.svg),
-        url(../img/cross-back.svg),
-        url(../img/cross-back.svg),
-        url(../img/cross-back.svg),
-        url(../img/cross-back.svg),
-        url(../img/cross-back.svg),
-        url(../img/circle-right.svg),
-        url(../img/circle-left.svg)
-    ; /* cross */
-        background-position:
-                top left, /*gradient*/
-                top 7% left 5%, /* cross */
-                top 12% left 3%,  /* cross */
-                top 30% right 10%, /* cross */
-                top 40% right 8%, /* cross */
-                top 82% left 5%, /* cross */
-                top 87% left 3%,  /* cross */
-                top 92% right 10%, /* cross */
-                top 87% right 8%, /* cross */
-                top 10% right, /*circle right*/
-                top 65% left /*circle left*/
-    ;  /* cross */
-        background-size:
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* cross */
-                auto auto, /* circle right*/
-                auto auto /* circle left*/
-    ;
-        background-repeat: no-repeat;
+        background:
+            linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat;
+            url(../img/cross-back.svg) top 7% left 5%/auto no-repeat, /* cross */
+            url(../img/cross-back.svg) top 30% right 10%/auto no-repeat, /* cross */
+            url(../img/cross-back.svg) top 40% right 8%/auto no-repeat, /* cross */
+            url(../img/cross-back.svg) top 82% left 5%/auto no-repeat, /* cross */
+            url(../img/cross-back.svg) top 87% left 3%/auto no-repeat,  /* cross */
+            url(../img/cross-back.svg) top 87% left 3%/auto no-repeat,  /* cross */
+            url(../img/cross-back.svg) top 87% right 8%/auto no-repeat, /* cross */
+            url(../img/cross-back.svg),
+            url(../img/circle-right.svg) top 10% right, /*circle right*/
+            url(../img/circle-left.svg) top 65% left; /*circle left*/
 
     }
 
@@ -161,15 +121,36 @@ footer {
         padding-top: 50px;
         padding-bottom: 50px;
     }
+
+    .end-footer {
+        background-color: #0E278B;
+        height: 50px;
+    }
 }
 
-/*Корректировка верхнего положения руки и надписи Под IpodMini и Ipod Air   768-1024   */
+/*Корректировка верхнего положения руки и надписи Под IpodMini (768) и Ipod Air (820)   768-1024   */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .hand > img {
-        margin-left: -50px;
+
+    .hand_position {
+        margin-top: 200px;
+        margin-left: 55%;
     }
-    .checkpromo {
-        margin-left: 40px;
+
+    .h1_position {
+        font-size: 55px;
+        margin-left: 120px;
+    }
+
+    #header {
+        background: url(../img/arrows.svg) top 10% right 7%/auto no-repeat, /* arrow */
+        /*url(../img/arrows-back.svg) bottom 10% left 5%/auto no-repeat, !* back-arrow *!*/
+        url(../img/top-circle.svg) top left/auto no-repeat, /* top circle*/
+        url(../img/bottom-circl.svg) bottom 10% left 30%/auto no-repeat, /* bottom circle*/
+        url(../img/cross.svg) bottom 34% right 14%/auto no-repeat, /*Крестик*/
+        url(../img/cross.svg) bottom 66% right 12%/auto no-repeat, /*Крестик*/
+        url(../img/cross.svg) bottom 30% right 55%/auto no-repeat, /*Крестик*/
+        url(../img/cross.svg) bottom 60% right 48%/auto no-repeat, /*Крестик*/
+        url(../img/ellipse_1.svg) top -90px center/cover no-repeat;/* ellipse*/
     }
 
     .top-phone {
@@ -177,43 +158,21 @@ footer {
     }
 
     #possibility {
-        background-image: url(../img/arrows-back.svg); /* back-arrow */
-        background-position: top 70% left; /* arrow */
-        background-size: auto 30px;
-        background-repeat: no-repeat;
+        background: url(../img/arrows-back.svg) top 70% left/auto 30px no-repeat; /* back-arrow */
     }
 
     #team {
-        background-image: url(../img/arrows-blue.svg); /* back-arrow */
-        background-position: top 70% right; /* arrow */
-        background-size: auto 30px;
-        background-repeat: no-repeat;
+        background: url(../img/arrows-blue.svg) top 70% right/auto 30px no-repeat; /* back-arrow */
     }
 
     #contact {
-        background-image: url(../img/arrows-blue.svg); /* back-arrow */
-        background-position: top 50% right; /* arrow */
-        background-size: auto 30px;
-        background-repeat: no-repeat;
+        background: url(../img/arrows-blue.svg) top 50% right/ auto 30px no-repeat; /* back-arrow */
     }
 
     .background_image {
-        background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%),
-        url(../img/circle-right.svg),
-        url(../img/circle-left.svg)
-    ; /* cross */
-        background-position:
-                top left, /*gradient*/
-                top 10% right, /*circle right*/
-                top 65% left /*circle left*/
-    ;  /* cross */
-        background-size:
-                auto auto,
-                auto auto, /* circle right*/
-                auto auto /* circle left*/
-    ;
-        background-repeat: no-repeat;
-
+        background: url(../img/circle-right.svg) top 10% right/auto no-repeat, /*circle right*/
+                    url(../img/circle-left.svg) top 65% left/auto no-repeat, /*circle left*/
+                    linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat; /*gradient*/
     }
 
     footer>.row {
@@ -225,7 +184,8 @@ footer {
 
 
 
-@media (max-width: 1040px) {
+/*Это какие то просто исправление локальные  размер лого уменьшить футер уменьшить*/
+@media (min-width: 991px) and (max-width: 1040px)  {
     .contact {
         padding: 20px;
         background-color: #D0E7FD;
@@ -238,7 +198,8 @@ footer {
     }
 }
 
-@media (max-width: 990px) {
+/*Это какие то просто исправление локальные  размер лого уменьшить футер уменьшить*/
+@media (min-width: 415px) and (max-width: 990px) {
     .footer-logo {
         display: none;
     }
@@ -252,16 +213,32 @@ footer {
         height: 720px;
     }
 
-    .hand > img {
+    .h1_position {
+        padding-top: 100px;
+        margin-left: 100px;
+    }
+
+
+    .hand_position {
         width: 300px;
         margin-left: 90px;
-        margin-top: 208px;
+        margin-top: 138px;
     }
+
     #possibility > div > h1 {
         font-size: 40px;
     }
     .footer-qr {
         width: 200px;
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+    .end-footer {
+        background-color: #0E278B;
+        height: 50px;
     }
 }
 
@@ -272,25 +249,36 @@ footer {
         height: 521px;
     }
 
-    .hand > img {
+    .h1_position {
+        padding-top: 40px;
+        margin-left: 100px;
+    }
+
+
+    .hand_position {
         width: 240px;
         margin-left: 90px;
-        margin-top: 68px;
+        margin-top: 76px;
     }
+
+
     #possibility > div > h1 {
         font-size: 25px;
     }
     .footer-qr {
         width: 200px;
     }
-}
 
-@media (min-width: 1400px) {
-    .hand {
-        margin-top: 100px;
+    .footer-logo {
+        display: none;
     }
 
+    .end-footer {
+        background-color: #0E278B;
+        height: 50px;
+    }
 }
+
 
 
 

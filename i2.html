@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- МЕТА -->
+    <title>Чековое промо</title>
+    <meta name="description" content="Чековое промо">
+    <meta name="keywords" content="Чековое промо, продвижение товаров и услуг, Telegram, QRcod">
+
+    <!-- Контролирует поведение поисковых систем при индексации страницы -->
+    <meta name="robots" content="index,follow,noodp"><!-- Все поисковые системы -->
+    <meta name="googlebot" content="index,follow"><!-- Указание отдельно для Google -->
+
+    <!-- Позволяет указать Google не показывать в поисковой выдаче поле для поиска по сайту -->
+    <meta name="google" content="nositelinkssearchbox"><!-- Позволяет указать Google не предлагать перевести эту страницу -->
+    <meta name="google" content="notranslate"><!-- Подтверждает авторство страницы в Google Search Console -->
+    <meta name="google-site-verification" content="verification_token"> <!-- Тег указания ПО, которое сгенерировало эту страницу -->
+    <meta name="generator" content="Чековое Промо. Телеграм бот сканиует QR коды чеков, определяет состав покупки. Бот смотрит соответствие условием Вашей акции и отправляет купон на скидку"><!-- Короткое описание тематики вашего сайта -->
+    <meta name="subject" content="Чековое Промо. Телеграм бот сканиует QR коды чеков, определяет состав покупки. Бот смотрит соответствие условием Вашей акции и отправляет купон на скидку"><!-- open graph Facebook-->
+    <meta content="Чековое Промо. Телеграм бот сканиует QR коды чеков, определяет состав покупки. Бот смотрит соответствие условием Вашей акции и отправляет купон на скидку">
+    <meta content="website">
+
+    <!-- если сайт многоязычный -->
+    <!-- <meta property="og:locale" content="ru_RU"> -->
+    <meta content="http://apps.mediasoft.ru">
+
+    <!-- не меньше 600х315, не более 8Мб -->
+    <meta content="http://apps.mediasoft.ru/reciept/assets/images/Логотип MS с белым фоном 260х260.png">
+    <meta content="Чековое Промо. Телеграм бот сканиует QR коды чеков, определяет состав покупки. Бот смотрит соответствие условием Вашей акции и отправляет купон на скидку">
+    <meta content="Facebook ID">
+
+
+    <!--     Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#0E278B">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+    <link href=./css/bootstrap.css rel="stylesheet">
+    <link href=./css/default.css rel="stylesheet">
+    <link href=./css/font/permian.css rel="stylesheet">
+    <script src="./js/bootstrap.bundle.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg border-bottom border-white">
+    <div class="container">
+        <a class="navbar-brand pt-5 pb-4" href="https://www.ms-promotion.ru">
+            <img id="logo" src="./img/logo_MS_invert.svg">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16" color="white">
+                <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+            </svg>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center nav-fill pt-5 pb-3 fs-5" id="navbarSupportedContent">
+            <a class="nav-link active " aria-current="page" href="#">Главная</a>
+            <a class="nav-link active" aria-current="page" href="#main"><nobr>Пример механик</nobr></a>
+            <a class="nav-link active" aria-current="page" href="#possibility">Возможности</a>
+            <a class="nav-link active" aria-current="page" href="#team">Команда</a>
+            <a class="nav-link active" aria-current="page" href="#contact">Контакты</a>
+            <a class="nav-link active top-phone" aria-current="page" href="tel:+73833632858">
+                <img  src="./img/phone-with-baloon.svg">
+                <span id="phone" type="tel">+7(383) 3632858</span>
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ######################### Header ##########################-->
+
+<section id="header">
+        <h1 class="h1_position user-select-none display-1 text-white fw-bold lh-base ">ЧЕКОВОЕ<br>ПРОМО</h1>
+        <img class="hand_position" src="./img/hand-with-QR.png">
+</section>
+
+<!-- ######################### Header ##########################-->
+
+<section class="background_image">
+    <div class="container">
+        <div class="row pt-5" id="main">
+            <div class="col">
+                <h1 class="text-center display-3" >ПРИМЕР МЕХАНИКИ</h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle anim" name="main-one" >1</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">АНОНС</h3>
+                        <p class="card-text">Покупатель видит анонс акции (в медийной рекламе, SMM, точках продаж).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle" name="main-two" >2</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">РЕГИСТРАЦИЯ</h3>
+                        <p class="card-text">Впервые покупает  продукт и регистрирует чек в вашей Telegram группе. Telegram бот круглосуточно ведет интерактивный диалог с покупателем. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle" name="main-three">3</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">ПОКУПКА</h3>
+                        <p class="card-text">Совершает повторную покупку и регистрирует чеки в вашей Telegram группе, чтобы выигрывать ежедневные или еженедельные призы.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h1 class="card-header ">
+                        <button class="border-0 animation-circle" name="main-four">4</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">ГЛАВНЫЙ ПРИЗ</h3>
+                        <p class="card-text">Участвует в розыгрыше главного приза в конце акции. Участники определяются согласно Вашим, заранее определенным условиям. </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row pt-5" id="possibility">
+            <div class="col">
+                <h1 class="text-center display-3" >ВОЗМОЖНОСТИ</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle" name="main-three">1</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">Подлинность покупки</h3>
+                        <p class="card-text">Все чеки проходят проверку на подлинность. Вы точно будете знать ваш продукт был в чеке. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle" name="main-three">2</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">Доступ в торговые сети</h3>
+                        <p class="card-text">С чековым промо необязательно платить за проведения акций в крупных магазинах и торговых сетях</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle" name="main-three">3</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">Без переналадки</h3>
+                        <p class="card-text">Не обязательно модифицировать элементы пачки или клеить стикеры</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle" name="main-three">4</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">Использует чат бот Telegram </h3>
+                        <p class="card-text">Мессенджер Telegram доступен и хорошо известен пользователям. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle" name="main-three">5</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">Генерация QR кодов </h3>
+                        <p class="card-text">При выполнении необходимых условий акции чат бот генерирует уникальные QR коды считываемые кассами.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <h1 class="card-header">
+                        <button class="border-0 animation-circle" name="main-three">6</button>
+                    </h1>
+                    <div class="card-body">
+                        <h3 class="card-title">Неограниченные сроки акции</h3>
+                        <p class="card-text">Акция может идти длительные сроки, что позволяет вовлечь аудиторию в бренд-игру с определенными, понятными правилами. И поддерживать покупательскую активность в течении года.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-5" id="team">
+            <div class="col">
+                <h1 class="text-center display-3" >НАША КОМАНДА</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="./img/lanister.jpeg" class="card-img-top rounded" >
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Тирион Ланнистер</h3>
+                        <p class="card-text">
+                            Самый мудрый из Ланнистеров
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="./img/white_king.jpg" class="card-img-top rounded" >
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Белкин Денис</h3>
+                        <p class="card-text">
+                            Программинг
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="./img/mather_of_dragon.jpg" class="card-img-top rounded " >
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Супрун Наталья</h3>
+                        <p class="card-text">
+                            Специалист по внутри магазинному маркетингу
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-5 pb-5" id="contact">
+            <div class="col">
+                <h1 class="text-center display-3" >ЗАГЛЯНИ К НАМ</h1>
+            </div>
+        </div>
+        <div class="row justify-content-evenly p-4">
+            <div class="col-sm-6 contact" >
+                <h2>Контактные данные</h2>
+                <br>
+                <h4>Телефон</h4>
+                <a class="nav-link active" aria-current="page" href="tel:+73833632858">
+                    <nobr>
+                        <img src="./img/phone-footer.svg">
+                        <span style="color: #0E278B; font-family: 'Permian Sans'" id="phone-footer" type="tel">8-383-363-2858</span>
+                    </nobr>
+                </a>
+                <br>
+                <h4>Наша почта</h4>
+                <a class="nav-link active" aria-current="page" href="mailto:promotion@mediasoft.ru">
+                    <span style="color: #0E278B; font-family: 'Permian Sans'">promotion@mediasoft.ru</span>
+                </a>
+
+            </div>
+
+            <div class="col-sm-6 text-center ">
+                <a href="https://t.me/reciept_bot">
+                    <img class="footer-qr" src="./img/qr-code.gif">
+                </a>
+                <h3>Жми QR-код </h3>
+                <p>Тестовый Telegram канал магазин "Удача"</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--Начало Футер  сайта -->
+
+<footer class="border-top border-primary p-3">
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="row">
+                <ul class="nav col-md-12 justify-content-between fs-5" >
+                    <li class="nav-item"><a href="#" class="nav-link text-muted">Главная</a></li>
+                    <li class="nav-item"><a href="#main" class="nav-link  text-muted">Пример механик</a></li>
+                    <li class="nav-item"><a href="#possibility" class="nav-link text-muted">Возможности</a></li>
+                    <li class="nav-item"><a href="#team" class="nav-link  text-muted">Команда</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link  text-muted">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="font-size: 80%">Политика конфиденциальности<br>© 1995-2022 Компания "MediaSoft"</p>
+                </div>
+                <div class="col-md-8">
+                    <p style="font-size: 80%">Сайт носит исключительно информационный характер и не является публичной офертой, определяемой положениями ГК РФ. Для получения подробной информации о наличии, видах, характеристика и стоимости услуг обращайтесь в офис продаж</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 align-self-center ">
+            <a href="https://www.ms-promotion.ru">
+                <img  class="footer-logo" style="margin-left: 10% "  src="./img/logo_ms.svg"/>
+            </a>
+        </div>
+    </div>
+
+</footer>
+
+<!--Конец Футера сайта -->
+<div class="end-footer"></div>
+
+</body>
+</html>
+<script>
+
+    $(document).ready(function(){
+        const w = $(window).width();
+
+
+        const start_margin_text = parseInt($('#header>h1').css('margin-left'));
+        const start_margin_image = parseInt($('#header>img').css('margin-left'));
+        var scrol_funnction = (x)=>{
+            $(window).scroll(function (event) {
+                var scroll = $(window).scrollTop();
+                if (scroll > x ) {
+                    $('#header>img').addClass('invisible');
+                    return;
+                } /* Что бы не слишком смещались элементы за пределы экрана*/
+
+                $('#header>img').removeClass('invisible');
+                $('#header>img').addClass('visible');
+                console.log(start_margin_text + scroll);
+                $('#header>h1').css('margin-left', start_margin_text + scroll);
+                $('#header>h1').css('margin-left', start_margin_text + scroll);
+                $('#header>img').css('margin-left', start_margin_image - scroll);
+
+                $('#header>img').css('opacity', 100/scroll  );
+
+            });
+        }
+        /* Размер больше чем iPad Mini*/
+        if (w >= 768 & w <= 820) {
+            scrol_funnction(400);
+        }   else if (w > 820 ) {
+            scrol_funnction(550);
+        }
+
+    });
+</script>
+
