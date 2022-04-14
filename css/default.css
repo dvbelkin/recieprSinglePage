@@ -169,6 +169,14 @@ footer {
         background: url(../img/arrows-blue.svg) top 50% right/ auto 30px no-repeat; /* back-arrow */
     }
 
+    .contact {
+        padding: 20px;
+        background-color: #D0E7FD;
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+    }
+
     .background_image {
         background: url(../img/circle-right.svg) top 10% right/auto no-repeat, /*circle right*/
                     url(../img/circle-left.svg) top 65% left/auto no-repeat, /*circle left*/
@@ -204,6 +212,13 @@ footer {
         display: none;
     }
 
+    .contact {
+        padding: 20px;
+        background-color: #D0E7FD;
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+    }
 }
 
 /* Iphone XR* widh 414px */
@@ -228,6 +243,15 @@ footer {
     #possibility > div > h1 {
         font-size: 40px;
     }
+
+    .contact {
+        padding: 20px;
+        background-color: #D0E7FD;
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+    }
+
     .footer-qr {
         width: 200px;
     }
@@ -276,6 +300,14 @@ footer {
     .end-footer {
         background-color: #0E278B;
         height: 50px;
+    }
+
+    .contact {
+        padding: 20px;
+        background-color: #D0E7FD;
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
     }
 }
 
