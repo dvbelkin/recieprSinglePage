@@ -31,7 +31,7 @@ footer {
 
 #header {
     background: url(../img/ellipse_1.svg) top -90px center/auto no-repeat; /* ellipse*/
-    height: 720px;
+    height: 100%;
 }
 
 
@@ -50,7 +50,7 @@ footer {
 /*https://webcode.tools/generators/css/keyframe-animation*/
 
 .anim {
-    animation: myAnim 5s ease 0s 2 normal forwards;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 
@@ -70,18 +70,39 @@ footer {
 
 /*################################################## Начинается подстройка под размеры */
 
+
+
+@media (min-width: 1400px)  {
+
+    .h1_position {
+        font-size: 800%;
+    }
+}
+
+@media (min-width: 1900px)  {
+
+    .h1_position {
+
+        margin-left: 30%;
+        font-size: 1000%;
+    }
+}
+
 /* Браузер больче чем 1025*/
 @media (min-width: 1025px)  {
 
     .h1_position {
-        margin-left: 200px;
+        font-size: 600%;
+        margin-left: 10%;
         overflow:hidden; /* Кода надпись уходит за пределы ээкрана она исчезает */
     }
 
+
     .hand_position {
-        margin-top: 10%;
+        margin-top: 20%;
         margin-left: 60%;
-        overflow:hidden;
+        width: 20%;
+        overflow: hidden;
     }
 
     .contact {
@@ -103,6 +124,7 @@ footer {
         url(../img/cross.svg) bottom 30% right 55%/auto no-repeat, /*Крестик*/
         url(../img/cross.svg) bottom 60% right 48%/auto no-repeat, /*Крестик*/
         url(../img/ellipse_1.svg) top -90px center/cover no-repeat;/* ellipse*/
+
     }
 
     #possibility {
@@ -148,9 +170,10 @@ footer {
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .hand_position {
-        margin-top: 200px;
-        margin-left: 55%;
-        overflow:hidden;
+        margin-top: 20%;
+        margin-left: 60%;
+        width: 20%;
+        overflow: hidden;
     }
 
     .h1_position {
@@ -243,7 +266,7 @@ footer {
 
 @media (min-width: 376px) and (max-width: 414px) {
     #header {
-        height: 720px;
+        height: 100%;
     }
 
     .h1_position {
@@ -253,9 +276,10 @@ footer {
 
 
     .hand_position {
-        width: 300px;
-        margin-left: 90px;
-        margin-top: 138px;
+        margin-top: 40%;
+        margin-left: 25%;
+        width: 70%;
+        overflow: hidden;
     }
 
     #possibility > div > h1 {
@@ -288,7 +312,7 @@ footer {
 /* Iphone SE*/
 @media (max-width: 375px) {
     #header {
-        height: 521px;
+        height: 100%;
     }
 
     .h1_position {
@@ -296,12 +320,14 @@ footer {
         margin-left: 100px;
     }
 
-
     .hand_position {
-        width: 240px;
-        margin-left: 90px;
-        margin-top: 76px;
+        margin-top: 18%;
+        margin-left: 25%;
+        width: 70%;
+        overflow: hidden;
     }
+
+
 
 
     #possibility > div > h1 {

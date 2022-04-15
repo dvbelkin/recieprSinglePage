@@ -85,8 +85,8 @@
 <!-- ######################### Header ##########################-->
 
 <section id="header">
-        <h1 class="h1_position user-select-none display-1 text-white fw-bold lh-base ">ЧЕКОВОЕ<br>ПРОМО</h1>
-        <img class="hand_position" src="./img/hand-with-QR.png">
+    <h1 class="h1_position user-select-none display-1 text-white fw-bold lh-base ">ЧЕКОВОЕ<br>ПРОМО</h1>
+    <img class="hand_position" src="./img/hand-with-QR.png">
 </section>
 
 <!-- ######################### Header ##########################-->
@@ -104,7 +104,7 @@
             <div class="col-md-3">
                 <div class="card">
                     <h1 class="card-header">
-                        <button class="border-0 animation-circle anim" name="main-one" >1</button>
+                        <button class="border-0 animation-circle" name="main-one" >1</button>
                     </h1>
                     <div class="card-body">
                         <h3 class="card-title">АНОНС</h3>
@@ -340,12 +340,45 @@
 <script>
 
     $(document).ready(function(){
+
+        // ссылка на пример API на элементе задается обозревателя отслеживающий виден элемент или нет
+        // https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API
+        var start = false;
+
+        var options = {
+            root: document.querySelector('#scrollArea'),
+            rootMargin: '0px',
+            threshold: 1.0
+        }
+        var callback = function(entries, observer) {
+            /* Content excerpted, show below */
+            if (start) {
+                entries.map((item, index,  arr)=>{
+                    if ($(item.target).hasClass('anim')) {
+                        $(item.target).removeClass('anim');
+                    }   else {
+                        $(item.target).addClass('anim');
+                    }
+                });
+            } else {
+                start = true;
+            }
+        };
+
+        var target = $('.animation-circle');
+        var observer = new IntersectionObserver(callback, options);
+
+        target.map((index, currentValue, array)=>{
+            observer.observe(currentValue);
+        });
+
+
+
         const w = $(window).width();
-
-
         const start_margin_text = parseInt($('#header>h1').css('margin-left'));
         const start_margin_image = parseInt($('#header>img').css('margin-left'));
-        var scrol_funnction = (x)=>{
+
+        var scroll_head_function = (x)=>{
             $(window).scroll(function (event) {
                 var scroll = $(window).scrollTop();
                 if (scroll > x ) {
@@ -355,20 +388,23 @@
 
                 $('#header>img').removeClass('invisible');
                 $('#header>img').addClass('visible');
-                console.log(start_margin_text + scroll);
-                $('#header>h1').css('margin-left', start_margin_text + scroll);
-                $('#header>h1').css('margin-left', start_margin_text + scroll);
                 $('#header>img').css('margin-left', start_margin_image - scroll);
-
                 $('#header>img').css('opacity', 100/scroll  );
+
+
+                $('#header>h1').css('margin-left', start_margin_text + scroll);
+                $('#header>h1').css('margin-left', start_margin_text + scroll);
 
             });
         }
-        /* Размер больше чем iPad Mini*/
-        if (w >= 768 & w <= 820) {
-            scrol_funnction(400);
-        }   else if (w > 820 ) {
-            scrol_funnction(550);
+
+        /* Запуск анимации в зависимости от размера (экрана/окна браузера??) */
+        if (w >= 768 & w <= 820) { /* Размер больше чем iPad Mini*/
+            scroll_head_function(400);
+
+
+        }   else if (w > 820 ) { /* больше чем iPad Air*/
+            scroll_head_function(550);
         }
 
     });
