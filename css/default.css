@@ -21,19 +21,43 @@ nav {
     background-color: transparent;
     border-color: transparent;
 }
+
+.contact {
+    padding: 30px;
+    background-color: #D0E7FD;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+
 footer {
     background-color: #81BFFB;
 }
 .end-footer {
     background-color: #0E278B;
-    height: 100px;
+    height: 10vh;
 }
 
 #header {
-    background: url(../img/ellipse_1.svg) top -90px center/auto no-repeat; /* ellipse*/
-    height: 100%;
+    background: url(../img/ellipse_1.svg) top -90px center/cover no-repeat; /* ellipse*/
+    height: 85vh;
 }
 
+.background_image {
+    background:
+            linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat,
+            url(../img/cross-back.svg) top 7% left 5%/auto auto no-repeat, /* cross */
+            url(../img/cross-back.svg) top 30% right 10%/auto auto no-repeat, /* cross */
+            url(../img/cross-back.svg) top 40% right 8%/auto auto no-repeat, /* cross */
+            url(../img/cross-back.svg) top 82% left 5%/auto auto no-repeat, /* cross */
+            url(../img/cross-back.svg) top 87% left 3%/auto auto no-repeat,  /* cross */
+            url(../img/cross-back.svg) top 87% left 3%/auto auto no-repeat,  /* cross */
+            url(../img/cross-back.svg) top 87% right 8%/auto auto no-repeat, /* cross */
+            url(../img/circle-right.svg) top 10% right/auto auto no-repeat, /*circle right*/
+            url(../img/circle-left.svg) top 65% left/auto auto no-repeat; /*circle left*/
+
+}
 
 
 .animation-circle {
@@ -72,218 +96,57 @@ footer {
 
 
 
-@media (min-width: 1400px)  {
-
-    .h1_position {
-        font-size: 800%;
-    }
-}
-
-@media (min-width: 1900px)  {
-
-    .h1_position {
-
-        margin-left: 30%;
-        font-size: 1000%;
-    }
-}
-
-/* Браузер больче чем 1025*/
-@media (min-width: 1025px)  {
-
-    .h1_position {
-        font-size: 600%;
-        margin-left: 10%;
-        overflow:hidden; /* Кода надпись уходит за пределы ээкрана она исчезает */
-    }
-
-
-    .hand_position {
-        margin-top: 20%;
-        margin-left: 60%;
-        width: 20%;
-        overflow: hidden;
-    }
-
-    .contact {
-        padding: 30px;
-        background-color: #D0E7FD;
-        height: 350px;
-        width: 350px;
-        border-radius: 10px;
-    }
-
-
-    #header {
-        background: url(../img/arrows.svg) top 10% right 7%/auto no-repeat, /* arrow */
-        url(../img/arrows-back.svg) bottom 10% left 5%/auto no-repeat, /* back-arrow */
-        url(../img/top-circle.svg) top left/auto no-repeat, /* top circle*/
-        url(../img/bottom-circl.svg) bottom 10% left 30%/auto no-repeat, /* bottom circle*/
-        url(../img/cross.svg) bottom 34% right 14%/auto no-repeat, /*Крестик*/
-        url(../img/cross.svg) bottom 66% right 12%/auto no-repeat, /*Крестик*/
-        url(../img/cross.svg) bottom 30% right 55%/auto no-repeat, /*Крестик*/
-        url(../img/cross.svg) bottom 60% right 48%/auto no-repeat, /*Крестик*/
-        url(../img/ellipse_1.svg) top -90px center/cover no-repeat;/* ellipse*/
-
-    }
-
-    #possibility {
-        background: url(../img/arrows-back.svg) top 70% left/auto no-repeat; /* back-arrow */
-    }
-
-    #team {
-        background: url(../img/arrows-blue.svg) top 70% right/auto no-repeat; /* back-arrow */
-    }
-
-    #contact {
-        background: url(../img/arrows-blue.svg) top 50% right/auto no-repeat; /* back-arrow */
-    }
-
-    .background_image {
-        background:
-            linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat;
-            url(../img/cross-back.svg) top 7% left 5%/auto no-repeat, /* cross */
-            url(../img/cross-back.svg) top 30% right 10%/auto no-repeat, /* cross */
-            url(../img/cross-back.svg) top 40% right 8%/auto no-repeat, /* cross */
-            url(../img/cross-back.svg) top 82% left 5%/auto no-repeat, /* cross */
-            url(../img/cross-back.svg) top 87% left 3%/auto no-repeat,  /* cross */
-            url(../img/cross-back.svg) top 87% left 3%/auto no-repeat,  /* cross */
-            url(../img/cross-back.svg) top 87% right 8%/auto no-repeat, /* cross */
-            url(../img/cross-back.svg),
-            url(../img/circle-right.svg) top 10% right, /*circle right*/
-            url(../img/circle-left.svg) top 65% left; /*circle left*/
-
-    }
-
-    footer>.row {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    .end-footer {
-        background-color: #0E278B;
-        height: 50px;
-    }
-}
-
 /*Корректировка верхнего положения руки и надписи Под IpodMini (768) и Ipod Air (820)   768-1024   */
 @media (min-width: 768px) and (max-width: 1024px) {
-
-    .hand_position {
-        margin-top: 20%;
-        margin-left: 60%;
-        width: 20%;
-        overflow: hidden;
-    }
-
-    .h1_position {
-        font-size: 55px;
-        margin-left: 120px;
-        overflow:hidden;
-    }
-
-    #header {
-        background: url(../img/arrows.svg) top 10% right 7%/auto no-repeat, /* arrow */
-        /*url(../img/arrows-back.svg) bottom 10% left 5%/auto no-repeat, !* back-arrow *!*/
-        url(../img/top-circle.svg) top left/auto no-repeat, /* top circle*/
-        url(../img/bottom-circl.svg) bottom 10% left 30%/auto no-repeat, /* bottom circle*/
-        url(../img/cross.svg) bottom 34% right 14%/auto no-repeat, /*Крестик*/
-        url(../img/cross.svg) bottom 66% right 12%/auto no-repeat, /*Крестик*/
-        url(../img/cross.svg) bottom 30% right 55%/auto no-repeat, /*Крестик*/
-        url(../img/cross.svg) bottom 60% right 48%/auto no-repeat, /*Крестик*/
-        url(../img/ellipse_1.svg) top -90px center/cover no-repeat;/* ellipse*/
-    }
-
-    .top-phone {
-        font-size: 80%;
-    }
-
-    #possibility {
-        background: url(../img/arrows-back.svg) top 70% left/auto 30px no-repeat; /* back-arrow */
-    }
-
-    #team {
-        background: url(../img/arrows-blue.svg) top 70% right/auto 30px no-repeat; /* back-arrow */
-    }
-
-    #contact {
-        background: url(../img/arrows-blue.svg) top 50% right/ auto 30px no-repeat; /* back-arrow */
-    }
-
-    .contact {
-        padding: 20px;
-        background-color: #D0E7FD;
-        height: 300px;
-        width: 300px;
-        border-radius: 10px;
-    }
-
     .background_image {
-        background: url(../img/circle-right.svg) top 10% right/auto no-repeat, /*circle right*/
-                    url(../img/circle-left.svg) top 65% left/auto no-repeat, /*circle left*/
-                    linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat; /*gradient*/
+        background:
+            url(../img/circle-right.svg) top 10% right/auto no-repeat, /*circle right*/
+            linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat; /*gradient*/
+    }
+    #hand {
+        left: 55%;
     }
 
-    footer>.row {
-        padding-top: 10px;
-        padding-bottom: 10px;
+    img[name=header_element_arrows], img[name=header_bottom-circl] {
+        visibility: hidden;
     }
+
+    @media (min-width: 415px) and (max-width: 990px) {
+
+        .footer-logo {
+            display: none;
+        }
+
+        .contact {
+            padding: 20px;
+            background-color: #D0E7FD;
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+        }
+    }
+
 
 }
 
 
 
 /*Это какие то просто исправление локальные  размер лого уменьшить футер уменьшить*/
-@media (min-width: 991px) and (max-width: 1040px)  {
-    .contact {
-        padding: 20px;
-        background-color: #D0E7FD;
-        height: 300px;
-        width: 300px;
-        border-radius: 10px;
-    }
-    .footer-logo {
-        height: 60px;
-    }
-}
-
-/*Это какие то просто исправление локальные  размер лого уменьшить футер уменьшить*/
-@media (min-width: 415px) and (max-width: 990px) {
-    .footer-logo {
-        display: none;
-    }
-
-    .contact {
-        padding: 20px;
-        background-color: #D0E7FD;
-        height: 300px;
-        width: 300px;
-        border-radius: 10px;
-    }
-}
 
 /* Iphone XR* widh 414px */
 
 @media (min-width: 376px) and (max-width: 414px) {
-    #header {
-        height: 100%;
+
+    .background_image {
+        background: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat; /*gradient*/
     }
 
-    .h1_position {
-        padding-top: 100px;
-        margin-left: 100px;
+    img[name=header_element], img[name=header_element_cross],  img[name=header_element_arrows], img[name=header_bottom-circl] {
+        visibility: hidden;
     }
 
-
-    .hand_position {
-        margin-top: 40%;
-        margin-left: 25%;
-        width: 70%;
-        overflow: hidden;
-    }
-
-    #possibility > div > h1 {
-        font-size: 40px;
+    #hand {
+        left: 15%;
     }
 
     .contact {
@@ -302,32 +165,22 @@ footer {
         display: none;
     }
 
-    .end-footer {
-        background-color: #0E278B;
-        height: 50px;
-    }
 }
 
 
 /* Iphone SE*/
 @media (max-width: 375px) {
-    #header {
-        height: 100%;
+
+    .background_image {
+        background: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat; /*gradient*/
     }
 
-    .h1_position {
-        padding-top: 40px;
-        margin-left: 100px;
+    img[name=header_element] {
+        visibility: hidden;
     }
-
-    .hand_position {
-        margin-top: 18%;
-        margin-left: 25%;
-        width: 70%;
-        overflow: hidden;
+    #hand {
+        left: 15%;
     }
-
-
 
 
     #possibility > div > h1 {
@@ -341,10 +194,6 @@ footer {
         display: none;
     }
 
-    .end-footer {
-        background-color: #0E278B;
-        height: 50px;
-    }
 
     .contact {
         padding: 20px;

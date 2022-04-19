@@ -84,9 +84,17 @@
 
 <!-- ######################### Header ##########################-->
 
-<section id="header">
-        <h1 class="h1_position user-select-none display-1 text-white fw-bold lh-base ">ЧЕКОВОЕ<br>ПРОМО</h1>
-        <img class="hand_position" src="./img/hand-with-QR.png">
+<section id="header" style="position: relative; overflow: hidden">
+    <h1 class="user-select-none display-1 text-white fw-bold lh-base" style="position: absolute; left:10%; top: 10%">ЧЕКОВОЕ<br>ПРОМО</h1>
+    <img src="./img/top-circle.svg" style="position: absolute; left:0 ; top: 0" name="header_element">
+    <img src="./img/bottom-circl.svg" style="position: absolute; left:30% ; bottom: 10%" name="header_bottom-circl">
+    <img src="./img/arrows.svg" style="position: absolute; right: 7% ; top: 10%" name="header_element_arrows">
+    <img src="./img/cross.svg" style="position: absolute; right: 14% ; bottom: 34%" name="header_element_cross">
+    <img src="./img/cross.svg" style="position: absolute; right: 12% ; top: 34%" name="header_element_cross">
+    <img src="./img/cross.svg" style="position: absolute; left: 50% ; top: 34%" name="header_element_cross">
+    <img src="./img/cross.svg" style="position: absolute; left: 46% ; bottom: 34%" name="header_element_cross">
+    <img src="./img/arrows-back.svg" style="position: absolute; left: 5% ; bottom: 10%" name="header_element_arrows">
+    <img id="hand" src="./img/hand-with-QR.png" style="position: absolute; right: 20%; bottom: 0" >
 </section>
 
 <!-- ######################### Header ##########################-->
@@ -95,10 +103,9 @@
         <div class="container">
             <div class="row pt-5" id="main">
                 <div class="col">
-                    <h1 class="text-center display-3" >ПРИМЕР МЕХАНИКИ</h1>
+                    <h1 class="text-center display-3 " >ПРИМЕР МЕХАНИКИ</h1>
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col-md-3">
@@ -148,11 +155,13 @@
 
             </div>
 
-            <div class="row pt-5" id="possibility">
-                <div class="col">
-                    <h1 class="text-center display-3" >ВОЗМОЖНОСТИ</h1>
+            <div class="row pt-5" style="position: relative" id="possibility">
+                <div class="col p-5">
+                    <h1 class="display-3 text-center">ВОЗМОЖНОСТИ</h1>
+                    <img src="./img/arrows-back.svg" style="position: absolute; left: 0; bottom: 30%" name="header_element">
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-sm-4">
                     <div class="card">
@@ -224,9 +233,10 @@
                 </div>
             </div>
 
-            <div class="row pt-5" id="team">
+            <div class="row pt-5" id="team" style="position: relative">
                 <div class="col">
                     <h1 class="text-center display-3" >НАША КОМАНДА</h1>
+                    <img src="./img/arrows-blue.svg" style="position: absolute; right: 0; bottom: 20%" name="header_element">
                 </div>
             </div>
             <div class="row">
@@ -265,9 +275,10 @@
                 </div>
             </div>
 
-            <div class="row pt-5 pb-5" id="contact">
+            <div class="row pt-5 pb-5" id="contact" style="position: relative;">
                 <div class="col">
                     <h1 class="text-center display-3" >ЗАГЛЯНИ К НАМ</h1>
+                    <img src="./img/arrows-blue.svg" style="position: absolute; right: 0; bottom: 40%" name="header_element">
                 </div>
             </div>
             <div class="row justify-content-evenly p-4">
@@ -303,7 +314,7 @@
     <!--Начало Футер  сайта -->
 
     <footer class="border-top border-primary p-3">
-            <div class="row">
+            <div class="row p-4 ">
                 <div class="col-lg-9">
                     <div class="row">
                         <ul class="nav col-md-12 justify-content-between fs-5" >
@@ -375,25 +386,24 @@
 
 
         const w = $(window).width();
-        const start_margin_text = parseInt($('#header>h1').css('margin-left'));
-        const start_margin_image = parseInt($('#header>img').css('margin-left'));
+        const start_margin_text = parseInt($('#header>h1').css('left'));
+        const start_margin_image = parseInt($('#hand').css('right'));
 
         var scroll_head_function = (x)=>{
             $(window).scroll(function (event) {
                 var scroll = $(window).scrollTop();
                 if (scroll > x ) {
-                    $('#header>img').addClass('invisible');
+                    $('#hand').addClass('invisible');
                     return;
                 } /* Что бы не слишком смещались элементы за пределы экрана*/
 
-                $('#header>img').removeClass('invisible');
-                $('#header>img').addClass('visible');
-                $('#header>img').css('margin-left', start_margin_image - scroll);
-                $('#header>img').css('opacity', 100/scroll  );
+                $('#hand').removeClass('invisible');
+                $('#hand').addClass('visible');
+                $('#hand').css('right', start_margin_image + scroll);
+                $('#hand').css('opacity', 200/scroll  );
 
-
-                $('#header>h1').css('margin-left', start_margin_text + scroll);
-                $('#header>h1').css('margin-left', start_margin_text + scroll);
+                $('#header>h1').css('left', start_margin_text + scroll);
+                $('#header>h1').css('left', start_margin_text + scroll);
 
             });
         }
@@ -404,7 +414,7 @@
 
 
         }   else if (w > 820 ) { /* больше чем iPad Air*/
-            scroll_head_function(550);
+            scroll_head_function(600);
         }
 
     });
