@@ -175,7 +175,7 @@ footer {
         background: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat; /*gradient*/
     }
 
-    img[name=header_element] {
+    img[name=header_element], img[name=header_element_cross],  img[name=header_element_arrows], img[name=header_bottom-circl] {
         visibility: hidden;
     }
     #hand {
@@ -183,9 +183,6 @@ footer {
     }
 
 
-    #possibility > div > h1 {
-        font-size: 25px;
-    }
     .footer-qr {
         width: 200px;
     }
