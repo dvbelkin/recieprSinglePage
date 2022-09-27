@@ -50,7 +50,7 @@
     <link href=./css/bootstrap.css rel="stylesheet">
     <link href=./css/default.css rel="stylesheet">
     <link href=./css/font/permian.css rel="stylesheet">
-    <script src="./js/bootstrap.bundle.min.js"> </script>
+    <script src="./js/bootstrap.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
@@ -85,7 +85,7 @@
 <!-- ######################### Header ##########################-->
 
 <section id="header" style="position: relative; overflow: hidden; height: 100vh">
-    <h1 name="left" class="box user-select-none text-white fw-bold lh-base" style="position: relative; left:10%; top: 10%">ЧЕКОВОЕ</h1>
+    <h1 name="left" class="box user-select-none text-white fw-bold lh-base" style="position: relative; left:10%; top: 16%">ЧЕКОВОЕ</h1>
     <h1 name="right" class="box user-select-none text-white fw-bold lh-base" style="position: relative; left:10%; top: 10%">ПРОМО</h1>
     <img id="hand" src="./img/hand-with-QR.png" >
 </section>
@@ -347,16 +347,13 @@
 
         // ссылка на пример API на элементе задается обозревателя отслеживающий виден элемент или нет
         // https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API
+
         var start = false;
 
-        var options = {
-            root: document.querySelector('#body'),
-            rootMargin: '0px',
-            threshold: 1
-        }
+
         var callback = function(entries, observer) {
-            /* Content excerpted, show below */
             if (start) {
+
                 entries.map((item, index,  arr)=>{
                     if ($(item.target).hasClass('anim')) {
                         $(item.target).removeClass('anim');
@@ -370,13 +367,13 @@
         };
 
         var target = $('.animation-circle');
-        var observer = new IntersectionObserver(callback, options);
+        var observer = new IntersectionObserver(callback);
 
         target.map((index, currentValue, array)=>{
             observer.observe(currentValue);
         });
 
-
+        /* Это мы двигаем руку и заголовок*/
         const w = $(window).width();
         // const start_margin_text = parseInt($('[name=left]').css('left'));
         const start_margin_text = parseInt($('#header>h1').css('left'));
@@ -407,7 +404,6 @@
         }   else if (w > 820 ) { /* больше чем iPad Air*/
             scroll_head_function(600);
         }
-
     });
 </script>
 
