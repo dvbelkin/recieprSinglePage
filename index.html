@@ -52,7 +52,6 @@
     <link href=./css/font/permian.css rel="stylesheet">
     <script src="./js/bootstrap.bundle.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
 
 </head>
 
@@ -84,8 +83,9 @@
 
 <!-- ######################### Header ##########################-->
 
-<section id="header" style="position: relative; overflow: hidden">
-    <h1 class="box user-select-none display-1 text-white fw-bold lh-base" style="position: absolute; left:10%; top: 10%">ЧЕКОВОЕ<br>ПРОМО</h1>
+<section id="header" style="position: relative; overflow: hidden; height: 85vh">
+    <h1  class="box user-select-none text-white fw-bold lh-base" style="position: relative; left:10%; top: 10%">ЧЕКОВОЕ</h1>
+    <h1  class="box user-select-none text-white fw-bold lh-base" style="position: relative; left:10%; top: 10%">ПРОМО</h1>
     <img src="./img/top-circle.svg" style="position: absolute; left:0 ; top: 0" name="header_element">
     <img src="./img/bottom-circl.svg" style="position: absolute; left:30% ; bottom: 10%" name="header_bottom-circl">
     <img src="./img/arrows.svg" style="position: absolute; right: 7% ; top: 10%" name="header_element_arrows">
@@ -94,7 +94,7 @@
     <img src="./img/cross.svg" style="position: absolute; left: 50% ; top: 34%" name="header_element_cross">
     <img src="./img/cross.svg" style="position: absolute; left: 46% ; bottom: 34%" name="header_element_cross">
     <img src="./img/arrows-back.svg" style="position: absolute; left: 5% ; bottom: 10%" name="header_element_arrows">
-    <img id="hand" src="./img/hand-with-QR.png" style="position: absolute; right: 20%; bottom: 0" >
+    <img id="hand" src="./img/hand-with-QR.png" >
 </section>
 
 <!-- ######################### Header ##########################-->
@@ -386,6 +386,7 @@
 
 
         const w = $(window).width();
+        // const start_margin_text = parseInt($('[name=left]').css('left'));
         const start_margin_text = parseInt($('#header>h1').css('left'));
         const start_margin_image = parseInt($('#hand').css('right'));
 

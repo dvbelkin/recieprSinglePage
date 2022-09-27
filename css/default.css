@@ -13,6 +13,15 @@ nav {
     /*margin: 0px 20px;*/
 }
 
+#header>h1 {
+    font-size: 10em;
+}
+
+#hand {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+}
 .background_image {
     background-image: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%);
 }
@@ -98,6 +107,10 @@ footer {
 
 /*Корректировка верхнего положения руки и надписи Под IpodMini (768) и Ipod Air (820)   768-1024   */
 @media (min-width: 768px) and (max-width: 1024px) {
+    #header>h1 {
+        font-size: 8em;
+    }
+
     .background_image {
         background:
             url(../img/circle-right.svg) top 10% right/auto no-repeat, /*circle right*/
@@ -136,7 +149,9 @@ footer {
 /* Iphone XR* widh 414px */
 
 @media (min-width: 376px) and (max-width: 414px) {
-
+    #header>h1 {
+        font-size: 4em;
+    }
     .background_image {
         background: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat; /*gradient*/
     }
@@ -171,15 +186,22 @@ footer {
 /* Iphone SE*/
 @media (max-width: 375px) {
 
+    #header>h1 {
+        font-size: 4em;
+    }
+
+    #hand {
+        transform: scale(0.7);
+        bottom: -10%;
+        left: 15%;
+    }
+
     .background_image {
         background: linear-gradient(351.37deg, rgba(115, 184, 250, 0.92) 0.53%, rgba(108, 182, 253, 0) 104.63%) top left/auto no-repeat; /*gradient*/
     }
 
     img[name=header_element], img[name=header_element_cross],  img[name=header_element_arrows], img[name=header_bottom-circl] {
         visibility: hidden;
-    }
-    #hand {
-        left: 15%;
     }
 
 
