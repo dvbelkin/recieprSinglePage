@@ -49,8 +49,22 @@ footer {
 }
 
 #header {
-    background: url(../img/ellipse_1.svg) top -90px center/cover no-repeat; /* ellipse*/
-    height: 85vh;
+    background:
+                url(../img/top-circle.svg) top 105px left /auto auto no-repeat, /*top-circle*/
+                url(../img/bottom-circl.svg) bottom 10% left 35% /auto auto no-repeat, /*bottom-circl.svg*/
+                url(../img/arrows.svg) top 210px right 90px /auto auto no-repeat, /*arrows.svg*/
+                url(../img/arrows-back.svg) bottom 90px left 90px /auto auto no-repeat, /*arrows-back.svg*/
+                url(../img/cross.svg) bottom 290px right 90px /auto auto no-repeat, /*arrows-back.svg*/
+                url(../img/cross.svg) bottom 290px center/auto auto no-repeat, /*arrows-back.svg*/
+                url(../img/cross.svg) top 40% right 35% /auto auto no-repeat, /*arrows-back.svg*/
+                url(../img/cross.svg) top 45% right 15% /auto auto no-repeat, /*arrows-back.svg*/
+                url(../img/ellipse_1.svg) top -90px center/cover no-repeat; /* ellipse*/
+    height: 100vh;
+}
+
+#header>div {
+    padding-left: 10%;
+    padding-top: 15%;
 }
 
 .background_image {
