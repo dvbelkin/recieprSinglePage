@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ewrtqwe r</title>
-    <link href=./css/bootstrap.css rel="stylesheet">
+    <link href="./css/bootstrap.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link href="./css/locomotive-scroll.css" rel="stylesheet">
+    <script src="./js/locomotive-scroll.min.js"></script>
+
 
 </head>
 <body>
-    <div>
-        <div style="width: auto; height: 100vh; background: gray"></div>
-        <div class="container" style="padding: 20px; height: 1500px" id="scrollArea">
+    <div data-scroll-container>
+        <div style="width: auto; height: 100vh;"></div>
+        <div data-scroll-section class="container" style="padding: 20px; height: 1500px; ">
 
 
             <div style="margin:20px;width: auto; height: 1px; background: blue"></div>
 
-            <div data-scroll class="card" style="width: 20rem; display: inline-block; ">
+            <div data-scroll data-scroll-speed="10" data-scroll-target="#span" data-scroll-position="top" class="card" style="width: 20rem; display: inline-block; ">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-            <div data-scroll class="card" style="width: 20rem; display: inline-block; ">
+            <div data-scroll data-scroll-speed="1" class="card" style="width: 20rem; display: inline-block; ">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-            <div data-scroll class="card" style="width: 20rem; display: inline-block; ">
+            <div data-scroll data-scroll-speed="4" class="card" style="width: 20rem; display: inline-block; ">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -36,81 +40,22 @@
             </div>
 
             <div style="margin:20px; width: auto; height: 1px; background: blue"></div>
+            <div style=""></div>
+            <span id="span">            </span>
         </div>
     </div>
+    <script>
+        (function () {
+            var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true
+            });
+        })();
+    </script>
 </body>
 </html>
 
 <style>
-    .inView {
-        background: lightblue;
-        position: relative;
-    }
+
 </style>
 
-<script>
-    //    Эксперимент продолжается
-    var options = {
-        rootMargin: '0px 0px -200px 0px',
-        threshold: 0
-    }
-
-    var callback = function(entries, observer) {
-        /* Content excerpted, show below */
-        entries.forEach(entry => {
-            // console.log('isIntersecting = ', entry.isIntersecting)
-            if(entry.isIntersecting == true) {
-                // Добавляем  из массива видимых
-                $(entry.target).addClass('inView')
-            }   else {
-                $(entry.target).removeClass('inView')
-            }
-/*
-            console.log(entry.time);               // a DOMHightResTimeStamp indicating when the intersection occurred.
-            console.log(entry.rootBounds);         // a DOMRectReadOnly for the intersection observer's root.
-            console.log(entry.boundingClientRect); // a DOMRectReadOnly for the intersection observer's target.
-            console.log(entry.intersectionRect);   // a DOMRectReadOnly for the visible portion of the intersection observer's target.
-            console.log(entry.intersectionRatio);  // the number for the ratio of the intersectionRect to the boundingClientRect.
-            console.log(entry.target);             // the Element whose intersection with the intersection root changed.
-            console.log(entry.isIntersecting);     // intersecting: true or false
-*/
-        })
-
-    };
-    var observer = new IntersectionObserver(callback, options);
-    var target = $('[data-scroll]');
-
-    target.map((index, currentValue, array)=>{
-        observer.observe(currentValue);
-    });
-
-    $(window).scroll(function (event) {
-        let scroll = $(window).scrollTop();
-
-        $('.inView').each((index, elem)=>{
-            let top = $(elem).css('top')
-            let bottom = $(elem).css('bottom')
-            let left = $(elem).css('left')
-            // console.log(elem, 'top = ', top, 'bottom = ', bottom)
-            console.log('1 = ',scroll, ' = 2', scroll - top)
-            $(elem).css('left', left + scroll/1500 )
-
-
-        })
-
-/*
-
-
-        $('.inView').map((elem)=>{
-            var viewportOffset = elem.getBoundingClientRect();
-// these are relative to the viewport
-            var top = viewportOffset.top;
-            var left = viewportOffset.left;
-            $(elem).css('left', `${left}px`)
-        })
-*/
-
-
-    })
-
-</script>
